@@ -17,8 +17,8 @@ allowed_origin = os.getenv("ALLOWED_ORIGIN", "https://stubi95.github.io")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[allowed_origin, "http://localhost:8000", "http://127.0.0.1:8000", "http://localhost:3000", "http://127.0.0.1:3000"],
-    allow_credentials=True,
+    allow_origins=["*"],
+    allow_credentials=False, # Must be False when allow_origins=["*"]
     allow_methods=["POST", "OPTIONS"],
     allow_headers=["*"],
 )
@@ -60,7 +60,7 @@ async def chat_endpoint(request: ChatRequest):
         
         # Call Claude
         response = client.messages.create(
-            model="claude-3-5-sonnet-20241022", # Or claude-3-haiku-20240307 for faster/cheaper responses
+            model="claude-haiku-4-5-20251001",
             max_tokens=1000,
             temperature=0.7,
             system=SYSTEM_PROMPT,
