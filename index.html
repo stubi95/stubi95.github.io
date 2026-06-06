@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alexander Stubanus | Data Integration & AI Architect</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Portfolio von Alexander Stubanus - Freiberuflicher Engineer für Data Integration, Hub-and-Spoke Datenarchitekturen, ETL, AI und RPA. 15 Jahre Erfahrung.">
+    
+    <!-- TODO(security): Tailwind CSS CDN dynamic style injection requires style-src 'unsafe-inline'. Inline script blocks for interactive scrolling and menu toggling require script-src 'unsafe-inline' in a single-file static GitHub Pages deployment unless migrated to external files or configured with dynamic nonces on a backend. -->
+    <!-- Content Security Policy (CSP) -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data:; connect-src 'self' https://fonts.googleapis.com;">
+
+    <!-- Google Fonts: Inter & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com/3.4.15"></script>
+
+    <!-- Custom CSS for custom variables and effects -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #030712; /* Neutral-950 */
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(6, 182, 212, 0.05) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(8, 145, 178, 0.05) 0%, transparent 40%);
+            background-attachment: fixed;
+        }
+        
+        .tech-grid {
+            background-size: 40px 40px;
+            background-image: 
+                linear-gradient(to right, rgba(255, 255, 255, 0.012) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.012) 1px, transparent 1px);
+        }
+
+        .font-mono-tech {
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #030712;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1f2937;
+            border-radius: 3px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #06b6d4;
+        }
+
+        /* Hub-and-Spoke Animation Styles */
+        @keyframes flowDash {
+            to {
+                stroke-dashoffset: -20;
+            }
+        }
+        .animate-flow-in {
+            stroke-dasharray: 6, 4;
+            animation: flowDash 1.5s linear infinite;
+        }
+        .animate-flow-out {
+            stroke-dasharray: 6, 4;
+            animation: flowDash 2.5s linear infinite;
+        }
+        @keyframes pulseGlow {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 0.8;
+                filter: drop-shadow(0 0 2px rgba(6, 182, 212, 0.6));
+            }
+            50% {
+                transform: scale(1.1);
+                opacity: 1;
+                filter: drop-shadow(0 0 8px rgba(6, 182, 212, 1));
+            }
+        }
+        .animate-hub-glow {
+            transform-origin: center;
+            animation: pulseGlow 3s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="text-slate-300 antialiased selection:bg-cyan-500/20 selection:text-cyan-300">
+
+    <!-- Sticky Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-white/5 backdrop-blur-md bg-[#030712]/75" id="nav-header">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#home" class="flex items-center gap-2 group">
+                <span class="w-8 h-8 rounded bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center text-white font-bold text-lg shadow-[0_0_15px_rgba(6,182,212,0.3)] transition-transform group-hover:scale-105">
+                    <i class="fa-solid fa-code-merge text-xs"></i>
+                </span>
+                <span class="font-mono-tech font-bold text-white tracking-wider text-sm">Alexander Stubanus</span>
+            </a>
+
+            <!-- Desktop Links -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="#home" class="text-slate-400 hover:text-white transition-colors duration-200" id="link-home">Home</a>
+                <a href="#philosophie" class="text-slate-400 hover:text-white transition-colors duration-200" id="link-philosophie">Philosophie</a>
+                <a href="#expertise" class="text-slate-400 hover:text-white transition-colors duration-200" id="link-expertise">Expertise</a>
+                <a href="#kontakt" class="text-slate-400 hover:text-white transition-colors duration-200" id="link-kontakt">Kontakt</a>
+            </nav>
+
+            <!-- CTA Navigation Button -->
+            <div class="hidden md:block">
+                <a href="#kontakt" class="px-4 py-2 rounded border border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-200 text-xs font-mono-tech tracking-wider uppercase">
+                    Austausch initiieren
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button class="md:hidden text-slate-400 hover:text-white focus:outline-none transition-colors" id="mobile-menu-btn" aria-label="Menü öffnen">
+                <i class="fa-solid fa-bars text-xl" id="mobile-menu-icon"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Drawer -->
+        <div class="hidden md:hidden border-t border-white/5 bg-[#030712]/95 px-6 py-6 space-y-4 shadow-xl" id="mobile-menu">
+            <nav class="flex flex-col gap-4 text-base font-medium">
+                <a href="#home" class="text-slate-400 hover:text-white transition-colors py-1" onclick="toggleMobileMenu()">Home</a>
+                <a href="#philosophie" class="text-slate-400 hover:text-white transition-colors py-1" onclick="toggleMobileMenu()">Philosophie</a>
+                <a href="#expertise" class="text-slate-400 hover:text-white transition-colors py-1" onclick="toggleMobileMenu()">Expertise</a>
+                <a href="#kontakt" class="text-slate-400 hover:text-white transition-colors py-1" onclick="toggleMobileMenu()">Kontakt</a>
+            </nav>
+            <div class="pt-4 border-t border-white/5">
+                <a href="#kontakt" class="block text-center w-full px-4 py-3 rounded bg-cyan-950/40 border border-cyan-500/30 text-cyan-400 font-mono-tech tracking-wider uppercase text-xs hover:bg-cyan-500/20 transition-all" onclick="toggleMobileMenu()">
+                    Austausch initiieren
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="tech-grid min-h-screen pt-20">
+
+        <!-- Hero Section -->
+        <section id="home" class="relative max-w-7xl mx-auto px-6 py-16 md:py-32 flex flex-col-reverse lg:flex-row items-center justify-between gap-12 border-b border-white/5 scroll-mt-20">
+            <div class="flex-1 max-w-2xl text-left space-y-6">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-cyan-950/30 border border-cyan-500/20 text-cyan-400 text-xs font-mono-tech tracking-wider uppercase">
+                    <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse"></span>
+                    Freelance Engineer & Architect
+                </div>
+                
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight tracking-tight">
+                    Datenarchitekturen & Intelligente Automatisierung
+                </h1>
+                
+                <p class="text-lg md:text-xl text-slate-400 leading-relaxed font-light">
+                    Transformation von komplexen Datenlandschaften in skalierbare, robuste Unternehmenswerte. Puristische Exzellenz im Design wartbarer ETL-Strukturen und KI-Systeme.
+                </p>
+
+                <div class="flex flex-wrap items-center gap-4 pt-4">
+                    <a href="#expertise" class="px-6 py-3.5 rounded bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-semibold text-sm transition-all duration-200 flex items-center gap-2 group shadow-[0_0_20px_rgba(6,182,212,0.2)]">
+                        Expertise ansehen
+                        <i class="fa-solid fa-arrow-right text-xs transition-transform group-hover:translate-x-1"></i>
+                    </a>
+                    <a href="#kontakt" class="px-6 py-3.5 rounded border border-slate-700 hover:border-slate-500 text-white font-medium text-sm transition-all duration-200">
+                        Kontakt aufnehmen
+                    </a>
+                </div>
+            </div>
+
+            <!-- Hero Interactive SVG graphic: Hub-and-Spoke flow representation -->
+            <div class="flex-1 w-full max-w-md lg:max-w-xl flex justify-center">
+                <div class="relative w-full max-w-[420px] aspect-square rounded-2xl border border-white/5 bg-[#0b0f19]/30 backdrop-blur-sm p-6 flex items-center justify-center shadow-2xl">
+                    <svg viewBox="0 0 200 200" class="w-full h-full text-slate-700" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Spoke Flow Lines -->
+                        <!-- Top-Left Spoke (ERP) -->
+                        <path d="M40 40 L90 90" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <path d="M40 40 L90 90" class="animate-flow-in text-cyan-500/60" stroke-width="1.8" stroke-linecap="round"/>
+                        <!-- Bottom-Left Spoke (CRM) -->
+                        <path d="M40 160 L90 110" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <path d="M40 160 L90 110" class="animate-flow-in text-cyan-500/60" stroke-width="1.8" stroke-linecap="round"/>
+                        <!-- Top-Right Target (Analytics) -->
+                        <path d="M110 90 L160 40" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <path d="M110 90 L160 40" class="animate-flow-out text-cyan-400/80" stroke-width="1.8" stroke-linecap="round"/>
+                        <!-- Bottom-Right Target (AI / RPA) -->
+                        <path d="M110 110 L160 160" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <path d="M110 110 L160 160" class="animate-flow-out text-cyan-400/80" stroke-width="1.8" stroke-linecap="round"/>
+
+                        <!-- Central Hub Element -->
+                        <g class="animate-hub-glow">
+                            <circle cx="100" cy="100" r="16" class="fill-[#080f25] stroke-cyan-500" stroke-width="2.5"/>
+                            <circle cx="100" cy="100" r="6" class="fill-cyan-400"/>
+                        </g>
+
+                        <!-- Spoke Nodes -->
+                        <!-- ERP -->
+                        <circle cx="40" cy="40" r="10" class="fill-[#0f172a] stroke-slate-600" stroke-width="1.5"/>
+                        <path d="M37 37 H43 V43 H37 Z" class="fill-slate-400" />
+                        <!-- CRM -->
+                        <circle cx="40" cy="160" r="10" class="fill-[#0f172a] stroke-slate-600" stroke-width="1.5"/>
+                        <circle cx="40" cy="160" r="3" class="fill-slate-400" />
+                        <!-- Analytics Target -->
+                        <circle cx="160" cy="40" r="10" class="fill-[#0f172a] stroke-slate-600" stroke-width="1.5"/>
+                        <path d="M157 43 L160 37 L163 43 Z" class="fill-slate-400" />
+                        <!-- AI/RPA Target -->
+                        <circle cx="160" cy="160" r="10" class="fill-[#0f172a] stroke-slate-600" stroke-width="1.5"/>
+                        <circle cx="160" cy="160" r="3.5" class="fill-cyan-400"/>
+
+                        <!-- Monospace Labels (Technical context labels) -->
+                        <text x="40" y="23" font-family="'JetBrains Mono', monospace" font-size="6" fill="#64748b" text-anchor="middle" letter-spacing="0.5">SPOKE: ERP</text>
+                        <text x="40" y="179" font-family="'JetBrains Mono', monospace" font-size="6" fill="#64748b" text-anchor="middle" letter-spacing="0.5">SPOKE: CRM</text>
+                        <text x="160" y="23" font-family="'JetBrains Mono', monospace" font-size="6" fill="#64748b" text-anchor="middle" letter-spacing="0.5">TARGET: DWH</text>
+                        <text x="160" y="179" font-family="'JetBrains Mono', monospace" font-size="6" fill="#64748b" text-anchor="middle" letter-spacing="0.5">TARGET: AI/RPA</text>
+                        <text x="100" y="77" font-family="'JetBrains Mono', monospace" font-size="6.5" fill="#22d3ee" text-anchor="middle" font-weight="bold" letter-spacing="1">CENTRAL HUB</text>
+                    </svg>
+                    <!-- Background aura -->
+                    <div class="absolute w-32 h-32 rounded-full bg-cyan-500/10 blur-3xl -z-10 pointer-events-none"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Profil & Philosophie Section -->
+        <section id="philosophie" class="max-w-7xl mx-auto px-6 py-20 md:py-32 border-b border-white/5 scroll-mt-20">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                
+                <!-- Section Header Left side -->
+                <div class="lg:col-span-4 space-y-4">
+                    <span class="font-mono-tech text-xs tracking-widest text-cyan-400 uppercase font-semibold">Profil & Philosophie</span>
+                    <h2 class="text-3xl font-bold text-white tracking-tight leading-tight">
+                        Architektur trifft Implementierungs-Exzellenz.
+                    </h2>
+                </div>
+
+                <!-- Text Right side -->
+                <div class="lg:col-span-8 space-y-8 text-slate-400 font-light text-base md:text-lg leading-relaxed">
+                    <p>
+                        Technologie ist kein Selbstzweck – sie dient der Reduzierung von Komplexität. Eine moderne Dateninfrastruktur ist nur so gut wie ihre Wartbarkeit und die Robustheit ihrer Schnittstellen. Ich helfe Unternehmen dabei, isolierte Dateninseln zu überwinden und skalierbare Architekturen nach bewährten Designmustern zu bauen.
+                    </p>
+                    <p class="border-l-2 border-cyan-500/40 pl-6 text-slate-300 italic font-normal">
+                        "15 Jahre IT-Gesamterfahrung bilden mein Fundament. In den letzten 5 Jahren habe ich mich vollständig auf Deep-Dive Engineering im Data-, AI- und Automatisierungsumfeld spezialisiert. Mein Fokus liegt auf dem Aufbau stabiler Hub-and-Spoke-Datenarchitekturen und resilienter Pipelines, die ohne ständige manuelle Eingriffe laufen."
+                    </p>
+                    
+                    <!-- Stats Grid -->
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-6 text-left">
+                        <div class="p-4 rounded border border-white/5 bg-[#0b0f19]/30">
+                            <div class="text-3xl font-extrabold text-white font-mono-tech">15<span class="text-cyan-400">+</span></div>
+                            <div class="text-xs text-slate-500 uppercase tracking-wider font-mono-tech mt-1">Jahre IT-Fundament</div>
+                        </div>
+                        <div class="p-4 rounded border border-white/5 bg-[#0b0f19]/30">
+                            <div class="text-3xl font-extrabold text-white font-mono-tech">5<span class="text-cyan-400">J.</span></div>
+                            <div class="text-xs text-slate-500 uppercase tracking-wider font-mono-tech mt-1">Tech Deep-Dive Focus</div>
+                        </div>
+                        <div class="p-4 rounded border border-white/5 bg-[#0b0f19]/30">
+                            <div class="text-3xl font-extrabold text-white font-mono-tech">100<span class="text-cyan-400">%</span></div>
+                            <div class="text-xs text-slate-500 uppercase tracking-wider font-mono-tech mt-1">Architekturtreue</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Expertise Section -->
+        <section id="expertise" class="max-w-7xl mx-auto px-6 py-20 md:py-32 border-b border-white/5 scroll-mt-20">
+            <div class="space-y-16">
+                <!-- Section Header -->
+                <div class="max-w-3xl space-y-4">
+                    <span class="font-mono-tech text-xs tracking-widest text-cyan-400 uppercase font-semibold">Kernkompetenzen</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white tracking-tight">Expertise in System- und Datenintegration</h2>
+                    <p class="text-slate-400 font-light text-base md:text-lg">
+                        Technologiefokus und Architekturmuster für anspruchsvolle Systemlandschaften.
+                    </p>
+                </div>
+
+                <!-- Grid Layout (4 cards) -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    
+                    <!-- Card 1: Data Architecture & Integration -->
+                    <div class="group relative rounded-xl border border-white/5 bg-[#0b0f19]/20 p-8 space-y-6 hover:border-cyan-500/30 hover:shadow-[0_0_30px_rgba(6,182,212,0.08)] transition-all duration-300">
+                        <div class="flex items-center justify-between">
+                            <div class="w-12 h-12 rounded bg-cyan-950/40 border border-cyan-500/20 flex items-center justify-center text-cyan-400 text-lg shadow-[0_0_10px_rgba(6,182,212,0.1)] group-hover:scale-105 transition-transform">
+                                <i class="fa-solid fa-network-wired"></i>
+                            </div>
+                            <span class="text-xs font-mono-tech text-slate-500 font-semibold">01 / ARCHITECTURE</span>
+                        </div>
+                        <div class="space-y-2">
+                            <h3 class="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">
+                                Data Architecture & Integration
+                            </h3>
+                            <p class="text-xs font-mono-tech text-slate-500">Kernbereich: Hub-and-Spoke & ETL/ELT</p>
+                        </div>
+                        <p class="text-sm text-slate-400 leading-relaxed font-light">
+                            Konzeption und Aufbau zentraler Datendrehscheiben zur Entkopplung heterogener Quellsysteme. Entwicklung performanter, transaktionssicherer ETL/ELT-Pipelines mit striktem Fokus auf Skalierbarkeit, Datenqualität und Traceability.
+                        </p>
+                        <!-- Tech stack tag cloud -->
+                        <div class="flex flex-wrap gap-2 pt-4 border-t border-white/5">
+                            <span class="px-2 py-1 rounded bg-[#0f172a] border border-slate-800 text-xs font-mono-tech text-slate-300">Apache Kafka</span>
+                            <span class="px-2 py-1 rounded bg-[#0f172a] border border-slate-800 text-xs font-mono-tech text-slate-300">Apache Airflow</span>
+                            <span class="px-2 py-1 rounded bg-[#0f172a] border border-slate-800 text-xs font-mono-tech text-slate-300">dbt</span>
+                            <span class="px-2 py-1 rounded bg-[#0f172a] border border-slate-800 text-xs font-mono-tech text-slate-300">Snowflake</span>
+                            <span class="px-2 py-1 rounded bg-[#0f172a] border border-slate-800 text-xs font-mono-tech text-slate-300">Python</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Data Engineering & Analytics -->
+                    <div class="group relative rounded-xl border border-white/5 bg-[#0b0f19]/20 p-8 space-y-6 hover:border-cyan-500/30 hover:shadow-[0_0_30px_rgba(6,182,212,0.08)] transition-all duration-300">
+                        <div class="flex items-center justify-between">
+                            <div class="w-12 h-12 rounded bg-cyan-950/40 border border-cyan-500/20 flex items-center justify-center text-cyan-400 text-lg shadow-[0_0_10px_rgba(6,182,212,0.1)] group-hover:scale-105 transition-transform">
+                                <i class="fa-solid fa-server"></i>
+                            </div>
+                            <span class="text-xs font-mono-tech text-slate-500 font-semibold">02 / ENGINEERING</span>
+                        </div>
+                        <div class="space-y-2">
+                            <h3 class="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">
+                                Data Engineering & Analytics
+                            </h3>
+                            <p class="text-xs font-mono-tech text-slate-500">Kernbereich: Pipelines & Data Warehouses</p>
+                        </div>
+                        <p class="text-sm text-slate-400 leading-relaxed font-light">
+                            Modellierung performanter Datenstrukturen für analytische Workloads. Konzeptionierung und Realisierung von relationalen und multidimensionalen Warehouses sowie Data Lakes zur verlässlichen Bereitstellung betriebswirtschaftlicher KPIs.
+                        </p>
+                        <!-- Tech stack tag cloud -->
+                        <div class="flex flex-wrap gap-2 pt-4 border-t border-white/5">
+                            <span class="px-2 py-1 rounded bg-[#0f172a] border border-slate-800 text-xs font-mono-tech text-slate-300">Apache Spark</span>
+                            <span class="px-2 py-1 rounded bg-[#0f172a] border border-slate-800 text-xs font-mono-tech text-slate-300">SQL</span>
+                            <span class="px-2 py-1 rounded bg-[#0f172a] border border-slate-800 text-xs font-mono-tech text-slate-300">Databricks</span>
+                            <span class="px-2 py-1 rounded bg-[#0f172a] border border-slate-800 text-xs font-mono-tech text-slate-300">BigQuery</span>
+                            <span class="px-2 py-1 rounded bg-[#0f172a] border border-slate-800 text-xs font-mono-tech text-slate-300">PostgreSQL</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: AI & Data Science -->
+                    <div class="group relative rounded-xl border border-white/5 bg-[#0b0f19]/20 p-8 space-y-6 hover:border-cyan-500/30 hover:shadow-[0_0_30px_rgba(6,182,212,0.08)] transition-all duration-300">
+                        <div class="flex items-center justify-between">
+                            <div class="w-12 h-12 rounded bg-cyan-950/40 border border-cyan-500/20 flex items-center justify-center text-cyan-400 text-lg shadow-[0_0_10px_rgba(6,182,212,0.1)] group-hover:scale-105 transition-transform">
+                                <i class="fa-solid fa-brain"></i>
+                            </div>
+                            <span class="text-xs font-mono-tech text-slate-500 font-semibold">03 / AI & SCIENCE</span>
+                        </div>
+                        <div class="space-y-2">
+                            <h3 class="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">
+                                AI & Data Science
+                            </h3>
+                            <p class="text-xs font-mono-tech text-slate-500">Kernbereich: Predictive ML & LLM Integration</p>
+                        </div>
+                        <p class="text-sm text-slate-400 leading-relaxed font-light">
+                            Praxisnahe Entwicklung statistischer Modelle und Prädiktionsalgorithmen. Nahtlose Verknüpfung von Machine Learning Services (MLOps) und LLM-basierten KI-Systemen mit bestehenden Enterprise-Anwendungen.
+                        </p>
+                        <!-- Tech stack tag cloud -->
+                        <div class="flex flex-wrap gap-2 pt-4 border-t border-white/5">
+                            <span class="px-2 py-1 rounded bg-[#0f172a] border border-slate-800 text-xs font-mono-tech text-slate-300">PyTorch</span>
+                            <span class="px-2 py-1 rounded bg-[#0f172a] border border-slate-800 text-xs font-mono-tech text-slate-300">Scikit-Learn</span>
+                            <span class="px-2 py-1 rounded bg-[#0f172a] border border-slate-800 text-xs font-mono-tech text-slate-300">LangChain</span>
+                            <span class="px-2 py-1 rounded bg-[#0f172a] border border-slate-800 text-xs font-mono-tech text-slate-300">MLflow</span>
+                            <span class="px-2 py-1 rounded bg-[#0f172a] border border-slate-800 text-xs font-mono-tech text-slate-300">Pandas</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: RPA (Robotic Process Automation) -->
+                    <div class="group relative rounded-xl border border-white/5 bg-[#0b0f19]/20 p-8 space-y-6 hover:border-cyan-500/30 hover:shadow-[0_0_30px_rgba(6,182,212,0.08)] transition-all duration-300">
+                        <div class="flex items-center justify-between">
+                            <div class="w-12 h-12 rounded bg-cyan-950/40 border border-cyan-500/20 flex items-center justify-center text-cyan-400 text-lg shadow-[0_0_10px_rgba(6,182,212,0.1)] group-hover:scale-105 transition-transform">
+                                <i class="fa-solid fa-robot"></i>
+                            </div>
+                            <span class="text-xs font-mono-tech text-slate-500 font-semibold">04 / AUTOMATION</span>
+                        </div>
+                        <div class="space-y-2">
+                            <h3 class="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">
+                                RPA (Robotic Process Automation)
+                            </h3>
+                            <p class="text-xs font-mono-tech text-slate-500">Kernbereich: Intelligente Workflows (IPA)</p>
+                        </div>
+                        <p class="text-sm text-slate-400 leading-relaxed font-light">
+                            Automatisierung proprietärer und fragmentierter Geschäftsprozesse. Entwicklung robuster Software-Roboter zur Überbrückung fehlender API-Schnittstellen, oft in Kombination mit KI-Entscheidungshilfen (Intelligent Process Automation).
+                        </p>
+                        <!-- Tech stack tag cloud -->
+                        <div class="flex flex-wrap gap-2 pt-4 border-t border-white/5">
+                            <span class="px-2 py-1 rounded bg-[#0f172a] border border-slate-800 text-xs font-mono-tech text-slate-300">UiPath</span>
+                            <span class="px-2 py-1 rounded bg-[#0f172a] border border-slate-800 text-xs font-mono-tech text-slate-300">Playwright</span>
+                            <span class="px-2 py-1 rounded bg-[#0f172a] border border-slate-800 text-xs font-mono-tech text-slate-300">Python</span>
+                            <span class="px-2 py-1 rounded bg-[#0f172a] border border-slate-800 text-xs font-mono-tech text-slate-300">REST APIs</span>
+                            <span class="px-2 py-1 rounded bg-[#0f172a] border border-slate-800 text-xs font-mono-tech text-slate-300">Power Automate</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Kontakt / CTA Section -->
+        <section id="kontakt" class="relative max-w-7xl mx-auto px-6 py-20 md:py-32 scroll-mt-20">
+            <div class="relative rounded-2xl border border-white/5 bg-gradient-to-b from-[#0b0f19]/30 to-[#030712]/30 backdrop-blur-sm p-8 md:p-16 text-center space-y-8 overflow-hidden shadow-2xl">
+                <!-- Decorative background elements -->
+                <div class="absolute -top-12 -left-12 w-48 h-48 rounded-full bg-cyan-500/5 blur-3xl pointer-events-none"></div>
+                <div class="absolute -bottom-12 -right-12 w-48 h-48 rounded-full bg-blue-500/5 blur-3xl pointer-events-none"></div>
+                
+                <div class="max-w-2xl mx-auto space-y-6 relative z-10">
+                    <span class="font-mono-tech text-xs tracking-widest text-cyan-400 uppercase font-semibold">Architekturdialog</span>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-white tracking-tight">
+                        Offen für fachlichen Austausch und spannende Architektur-Herausforderungen.
+                    </h2>
+                    <p class="text-slate-400 font-light leading-relaxed">
+                        Ob Sie vor einer komplexen Datenmigrations-Herausforderung stehen, Ihre ETL-Architektur bewerten lassen möchten oder nach Wegen zur intelligenten Prozessautomatisierung suchen – lassen Sie uns unverbindlich ins Gespräch kommen.
+                    </p>
+                    
+                    <div class="pt-6">
+                        <a href="mailto:stubanus@gmail.com?subject=Anfrage%20Datenarchitektur%20/%20Automatisierung" class="inline-flex items-center gap-3 px-8 py-4 rounded bg-white hover:bg-slate-200 text-slate-950 font-semibold text-sm transition-all duration-200 shadow-[0_0_30px_rgba(255,255,255,0.05)] hover:scale-[1.02]">
+                            <i class="fa-regular fa-envelope text-base"></i>
+                            Kontakt initiieren
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/5 bg-[#030712] py-8 text-center text-xs text-slate-500 font-mono-tech">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p>&copy; 2026 Alexander Stubanus. Alle Rechte vorbehalten.</p>
+            <div class="flex gap-6 text-slate-400">
+                <a href="#home" class="hover:text-white transition-colors">Home</a>
+                <a href="#philosophie" class="hover:text-white transition-colors">Philosophie</a>
+                <a href="#expertise" class="hover:text-white transition-colors">Expertise</a>
+                <a href="#kontakt" class="hover:text-white transition-colors">Kontakt</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Interactions -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const header = document.getElementById('nav-header');
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileMenuIcon = document.getElementById('mobile-menu-icon');
+            
+            // 1. Navbar Scroll Style Adjustment
+            const handleScroll = () => {
+                if (window.scrollY > 20) {
+                    header.classList.add('bg-[#030712]/90', 'shadow-lg');
+                    header.classList.remove('bg-[#030712]/75');
+                } else {
+                    header.classList.remove('bg-[#030712]/90', 'shadow-lg');
+                    header.classList.add('bg-[#030712]/75');
+                }
+            };
+            window.addEventListener('scroll', handleScroll);
+            handleScroll(); // Trigger once on load
+
+            // 2. Mobile Menu Toggle
+            const toggleMobileMenu = () => {
+                if (mobileMenu) {
+                    const isHidden = mobileMenu.classList.contains('hidden');
+                    if (isHidden) {
+                        mobileMenu.classList.remove('hidden');
+                        mobileMenuIcon.classList.remove('fa-bars');
+                        mobileMenuIcon.classList.add('fa-xmark');
+                    } else {
+                        mobileMenu.classList.add('hidden');
+                        mobileMenuIcon.classList.remove('fa-xmark');
+                        mobileMenuIcon.classList.add('fa-bars');
+                    }
+                }
+            };
+            
+            if (mobileMenuBtn) {
+                mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+            }
+
+            // Expose function for inline link onclick events
+            window.toggleMobileMenu = () => {
+                if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                    toggleMobileMenu();
+                }
+            };
+
+            // 3. Navigation Highlighting on Scroll
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = {
+                'home': document.getElementById('link-home'),
+                'philosophie': document.getElementById('link-philosophie'),
+                'expertise': document.getElementById('link-expertise'),
+                'kontakt': document.getElementById('link-kontakt')
+            };
+
+            const highlightNavigation = () => {
+                let currentActiveSectionId = '';
+                const scrollPosition = window.scrollY + 120; // offset for sticky header
+
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.offsetHeight;
+                    if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                        currentActiveSectionId = section.getAttribute('id');
+                    }
+                });
+
+                // Reset and apply active colors safely
+                Object.keys(navLinks).forEach(id => {
+                    const link = navLinks[id];
+                    if (link) {
+                        if (id === currentActiveSectionId) {
+                            link.classList.remove('text-slate-400');
+                            link.classList.add('text-cyan-400');
+                        } else {
+                            link.classList.remove('text-cyan-400');
+                            link.classList.add('text-slate-400');
+                        }
+                    }
+                });
+            };
+
+            window.addEventListener('scroll', highlightNavigation);
+            highlightNavigation(); // Trigger once on load
+        });
+    </script>
+</body>
+</html>
