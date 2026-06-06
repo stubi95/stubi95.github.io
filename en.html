@@ -116,7 +116,7 @@
 
     <!-- Skip link for keyboard / screenreader users -->
     <a href="#home" class="sr-only focus:not-sr-only focus:absolute focus:z-[60] focus:top-3 focus:left-3 focus:px-4 focus:py-2 focus:rounded-lg focus:bg-slate-900 focus:text-white focus:font-semibold">
-        Zum Inhalt springen
+        Skip to content
     </a>
 
     <!-- Sticky Navigation -->
@@ -128,29 +128,29 @@
             </a>
 
             <!-- Desktop Links -->
-            <nav class="hidden lg:flex items-center gap-7 text-sm font-medium" aria-label="Hauptnavigation">
+            <nav class="hidden lg:flex items-center gap-7 text-sm font-medium" aria-label="Main Navigation">
                 <a href="#home" class="text-slate-500 hover:text-slate-900 transition-colors duration-200" id="link-home">Home</a>
-                <a href="#philosophie" class="text-slate-500 hover:text-slate-900 transition-colors duration-200" id="link-philosophie">Profil</a>
+                <a href="#philosophie" class="text-slate-500 hover:text-slate-900 transition-colors duration-200" id="link-philosophie">Profile</a>
                 <a href="#expertise" class="text-slate-500 hover:text-slate-900 transition-colors duration-200" id="link-expertise">Expertise</a>
-                <a href="#projekte" class="text-slate-500 hover:text-slate-900 transition-colors duration-200" id="link-projekte">Projekte</a>
-                <a href="#werdegang" class="text-slate-500 hover:text-slate-900 transition-colors duration-200" id="link-werdegang">Werdegang</a>
-                <a href="#kontakt" class="text-slate-500 hover:text-slate-900 transition-colors duration-200" id="link-kontakt">Kontakt</a>
+                <a href="#projekte" class="text-slate-500 hover:text-slate-900 transition-colors duration-200" id="link-projekte">Projects</a>
+                <a href="#werdegang" class="text-slate-500 hover:text-slate-900 transition-colors duration-200" id="link-werdegang">Experience</a>
+                <a href="#kontakt" class="text-slate-500 hover:text-slate-900 transition-colors duration-200" id="link-kontakt">Contact</a>
             </nav>
 
             <!-- Lang Switch & CTA -->
             <div class="hidden lg:flex items-center gap-6">
                 <div class="flex items-center gap-2.5 text-sm font-bold">
-                    <span class="text-slate-900">DE</span>
+                    <a href="index.html" class="text-slate-400 hover:text-slate-900 transition-colors">DE</a>
                     <span class="text-slate-300 font-normal">|</span>
-                    <a href="en.html" class="text-slate-400 hover:text-slate-900 transition-colors">EN</a>
+                    <span class="text-slate-900">EN</span>
                 </div>
                 <a href="#kontakt" class="px-4 py-2 rounded-full bg-slate-900 text-white hover:bg-slate-700 transition-all duration-200 text-xs font-semibold tracking-wide">
-                    Kontakt aufnehmen
+                    Get in touch
                 </a>
             </div>
 
             <!-- Mobile Menu Toggle Button -->
-            <button class="lg:hidden text-slate-600 hover:text-slate-900 focus:outline-none transition-colors" id="mobile-menu-btn" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-menu">
+            <button class="lg:hidden text-slate-600 hover:text-slate-900 focus:outline-none transition-colors" id="mobile-menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
                 <i class="fa-solid fa-bars text-xl" id="mobile-menu-icon" aria-hidden="true"></i>
             </button>
         </div>
@@ -159,20 +159,20 @@
         <div class="hidden lg:hidden border-t border-white/50 bg-white/85 backdrop-blur-xl px-6 py-6 space-y-4 shadow-lg" id="mobile-menu">
             <nav class="flex flex-col gap-4 text-base font-medium" aria-label="Mobile Navigation">
                 <a href="#home" class="text-slate-600 hover:text-slate-900 transition-colors py-1" onclick="toggleMobileMenu()">Home</a>
-                <a href="#philosophie" class="text-slate-600 hover:text-slate-900 transition-colors py-1" onclick="toggleMobileMenu()">Profil</a>
+                <a href="#philosophie" class="text-slate-600 hover:text-slate-900 transition-colors py-1" onclick="toggleMobileMenu()">Profile</a>
                 <a href="#expertise" class="text-slate-600 hover:text-slate-900 transition-colors py-1" onclick="toggleMobileMenu()">Expertise</a>
-                <a href="#projekte" class="text-slate-600 hover:text-slate-900 transition-colors py-1" onclick="toggleMobileMenu()">Projekte</a>
-                <a href="#werdegang" class="text-slate-600 hover:text-slate-900 transition-colors py-1" onclick="toggleMobileMenu()">Werdegang</a>
-                <a href="#kontakt" class="text-slate-600 hover:text-slate-900 transition-colors py-1" onclick="toggleMobileMenu()">Kontakt</a>
+                <a href="#projekte" class="text-slate-600 hover:text-slate-900 transition-colors py-1" onclick="toggleMobileMenu()">Projects</a>
+                <a href="#werdegang" class="text-slate-600 hover:text-slate-900 transition-colors py-1" onclick="toggleMobileMenu()">Experience</a>
+                <a href="#kontakt" class="text-slate-600 hover:text-slate-900 transition-colors py-1" onclick="toggleMobileMenu()">Contact</a>
             </nav>
             <div class="pt-4 border-t border-slate-200 space-y-4">
                 <div class="flex justify-center items-center gap-3 text-sm font-bold">
-                    <span class="text-slate-900">DE</span>
+                    <a href="index.html" class="text-slate-400 hover:text-slate-900 transition-colors">DE</a>
                     <span class="text-slate-300 font-normal">|</span>
-                    <a href="en.html" class="text-slate-400 hover:text-slate-900 transition-colors">EN</a>
+                    <span class="text-slate-900">EN</span>
                 </div>
                 <a href="#kontakt" class="block text-center w-full px-4 py-3 rounded-full bg-slate-900 text-white font-semibold text-sm hover:bg-slate-700 transition-all" onclick="toggleMobileMenu()">
-                    Kontakt aufnehmen
+                    Get in touch
                 </a>
             </div>
         </div>
@@ -238,17 +238,17 @@
         <section id="philosophie" class="scroll-mt-28">
             <div class="space-y-10 md:space-y-16 py-12 md:py-20 border-b border-slate-200/50">
                 <div class="space-y-4 max-w-2xl">
-                    <span class="font-mono-tech text-xs tracking-widest text-blue-600 uppercase font-semibold">Profil &amp; Philosophie</span>
-                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 tracking-tight leading-tight">Architektur trifft<br>Implementierungs-Exzellenz.</h2>
+                    <span class="font-mono-tech text-xs tracking-widest text-blue-600 uppercase font-semibold">Profile &amp; Philosophy</span>
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 tracking-tight leading-tight">Architecture meets<br>Implementation Excellence.</h2>
                 </div>
 
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
                     <div class="lg:col-span-7 space-y-8 text-slate-600 leading-relaxed text-lg">
                         <p>
-                            Technologie ist kein Selbstzweck – sie dient der Reduktion von Komplexität. Eine Dateninfrastruktur ist nur so wertvoll wie ihre Wartbarkeit und die Robustheit ihrer Schnittstellen. Ich unterstütze Unternehmen dabei, isolierte Dateninseln aufzulösen und skalierbare Architekturen nach bewährten Designmustern aufzubauen.
+                            Technology is not an end in itself—it serves to reduce complexity. A data infrastructure is only as valuable as its maintainability and the robustness of its interfaces. I support companies in dissolving isolated data silos and building scalable architectures based on proven design patterns.
                         </p>
-                        <blockquote class="relative pl-8 text-slate-700 italic text-xl leading-relaxed before:content-['\201E'] before:absolute before:-left-2 before:-top-4 before:text-6xl before:text-blue-200 before:font-serif">
-                            Fünf Jahre fokussierte Erfahrung im Datenumfeld, davon zwei Jahre als Vollzeit-Professional – ein gezielter technologischer Deep-Dive statt Breite ohne Tiefe. Mein Schwerpunkt liegt auf der Entwicklung skalierbarer Datenarchitekturen und intelligenter Automatisierungslösungen, die reibungslos ineinandergreifen und manuelle Aufwände nachhaltig minimieren.
+                        <blockquote class="relative pl-8 text-slate-700 italic text-xl leading-relaxed before:content-['\201C'] before:absolute before:-left-2 before:-top-4 before:text-6xl before:text-blue-200 before:font-serif">
+                            Five years of focused experience in the data environment, including two years as a full-time professional—a targeted technological deep-dive instead of breadth without depth. My focus lies on developing scalable data architectures and intelligent automation solutions that interlock seamlessly and sustainably minimize manual effort.
                         </blockquote>
                     </div>
 
@@ -256,15 +256,15 @@
                     <div class="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-4 h-fit">
                         <div class="glass rounded-2xl p-6 hover:-translate-y-1 transition-transform duration-300">
                             <div class="text-4xl font-extrabold text-slate-900">5<span class="text-blue-600">+</span></div>
-                            <div class="text-xs text-slate-500 uppercase tracking-wider font-semibold mt-2">Jahre Fokus<br>Data, AI &amp; RPA</div>
+                            <div class="text-xs text-slate-500 uppercase tracking-wider font-semibold mt-2">Years Focus<br>Data, AI &amp; RPA</div>
                         </div>
                         <div class="glass rounded-2xl p-6 hover:-translate-y-1 transition-transform duration-300">
                             <div class="text-4xl font-extrabold text-slate-900">2<span class="text-blue-600">+</span></div>
-                            <div class="text-xs text-slate-500 uppercase tracking-wider font-semibold mt-2">Jahre Vollzeit<br>Professional</div>
+                            <div class="text-xs text-slate-500 uppercase tracking-wider font-semibold mt-2">Years Full-Time<br>Professional</div>
                         </div>
                         <div class="glass rounded-2xl p-6 sm:col-span-2 hover:-translate-y-1 transition-transform duration-300">
                             <div class="text-4xl font-extrabold text-slate-900">4</div>
-                            <div class="text-xs text-slate-500 uppercase tracking-wider font-semibold mt-2">Kernkompetenz-Felder</div>
+                            <div class="text-xs text-slate-500 uppercase tracking-wider font-semibold mt-2">Core Competencies</div>
                         </div>
                     </div>
                 </div>
@@ -275,9 +275,9 @@
         <section id="expertise" class="scroll-mt-28">
             <div class="space-y-10 md:space-y-16 py-12 md:py-20 border-b border-slate-200/50">
                 <div class="max-w-2xl space-y-3 px-2">
-                    <span class="font-mono-tech text-xs tracking-widest text-blue-600 uppercase font-semibold">Kernkompetenzen</span>
-                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight">Expertise in System- und Datenintegration</h2>
-                    <p class="text-slate-600 text-lg">Technologiefokus und Architekturmuster für anspruchsvolle Systemlandschaften.</p>
+                    <span class="font-mono-tech text-xs tracking-widest text-blue-600 uppercase font-semibold">Core Competencies</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight">Expertise in System &amp; Data Integration</h2>
+                    <p class="text-slate-600 text-lg">Technology focus and architectural patterns for complex system landscapes.</p>
                 </div>
 
             <!-- Grid Layout (4 cards) -->
@@ -296,7 +296,7 @@
                         <p class="text-xs font-mono-tech text-slate-500">Hub-and-Spoke &amp; ETL/ELT</p>
                     </div>
                     <p class="text-sm text-slate-600 leading-relaxed">
-                        Aufbau zentraler Datendrehscheiben zur Entkopplung heterogener Quellsysteme. Entwicklung von Schnittstellen- und ETL-Prozessen inkl. Mapping, Authentifizierung und Protokollierung – mit Fokus auf Skalierbarkeit, Datenqualität und Traceability.
+                        Building central data hubs to decouple heterogeneous source systems. Developing interface and ETL processes including mapping, authentication, and logging—with a focus on scalability, data quality, and traceability.
                     </p>
                     <div class="flex flex-wrap gap-2 pt-4 border-t border-slate-200/70">
                         <span class="px-2.5 py-1 rounded-full bg-white/70 border border-slate-200 text-xs font-medium text-slate-600">Python</span>
@@ -317,10 +317,10 @@
                     </div>
                     <div class="space-y-1">
                         <h3 class="text-lg font-bold text-slate-900">Data Engineering &amp; Business Intelligence</h3>
-                        <p class="text-xs font-mono-tech text-slate-500">Datenmodelle &amp; Reporting</p>
+                        <p class="text-xs font-mono-tech text-slate-500">Data Models &amp; Reporting</p>
                     </div>
                     <p class="text-sm text-slate-600 leading-relaxed">
-                        Aufbau und Weiterentwicklung von Datenmodellen sowie interaktiven Reports inkl. Kennzahlen- und Steuerungslogik. Verlässliche Bereitstellung betriebswirtschaftlicher KPIs für datengetriebene Entscheidungen.
+                        Design and continuous improvement of data models and interactive reports including KPI and control logic. Reliable provision of business KPIs for data-driven decisions.
                     </p>
                     <div class="flex flex-wrap gap-2 pt-4 border-t border-slate-200/70">
                         <span class="px-2.5 py-1 rounded-full bg-white/70 border border-slate-200 text-xs font-medium text-slate-600">Power BI</span>
@@ -342,10 +342,10 @@
                     </div>
                     <div class="space-y-1">
                         <h3 class="text-lg font-bold text-slate-900">AI &amp; Data Science</h3>
-                        <p class="text-xs font-mono-tech text-slate-500">Forecasting, Predictive ML &amp; LLM</p>
+                        <p class="text-xs font-mono-tech text-slate-500">Forecasting, Predictive ML &amp; LLMs</p>
                     </div>
                     <p class="text-sm text-slate-600 leading-relaxed">
-                        Entwicklung statistischer Modelle und Prädiktionsalgorithmen mit Praxisbezug – von klassischen Zeitreihen bis zu Gradient-Boosting- und neuronalen Verfahren. Integration LLM-gestützter Systeme in bestehende Anwendungen.
+                        Development of statistical models and prediction algorithms with practical relevance—from classic time series to gradient boosting and neural networks. Integration of LLM-based systems into existing applications.
                     </p>
                     <div class="flex flex-wrap gap-2 pt-4 border-t border-slate-200/70">
                         <span class="px-2.5 py-1 rounded-full bg-white/70 border border-slate-200 text-xs font-medium text-slate-600">XGBoost</span>
@@ -366,10 +366,10 @@
                     </div>
                     <div class="space-y-1">
                         <h3 class="text-lg font-bold text-slate-900">RPA (Robotic Process Automation)</h3>
-                        <p class="text-xs font-mono-tech text-slate-500">Intelligente Workflows (IPA)</p>
+                        <p class="text-xs font-mono-tech text-slate-500">Intelligent Workflows (IPA)</p>
                     </div>
                     <p class="text-sm text-slate-600 leading-relaxed">
-                        Automatisierung fragmentierter Geschäftsprozesse über RPA- und Bot-Skripte. Entwicklung robuster Software-Roboter zur Überbrückung fehlender API-Schnittstellen – bei Bedarf kombiniert mit KI-gestützten Entscheidungshilfen (Intelligent Process Automation).
+                        Automation of fragmented business processes via RPA and bot scripts. Development of robust software robots to bridge missing API interfaces—combined with AI-supported decision aids when needed (Intelligent Process Automation).
                     </p>
                     <div class="flex flex-wrap gap-2 pt-4 border-t border-slate-200/70">
                         <span class="px-2.5 py-1 rounded-full bg-white/70 border border-slate-200 text-xs font-medium text-slate-600">Power Automate</span>
@@ -385,15 +385,15 @@
             <!-- Technologie-Stack -->
             <div class="space-y-8 mt-12 md:mt-20">
                 <div class="max-w-2xl space-y-2">
-                    <h3 class="text-xl font-bold text-slate-900 tracking-tight">Technologie-Stack</h3>
-                    <p class="text-slate-600 text-sm">Eingesetzte Sprachen, Plattformen und Verfahren im Überblick.</p>
+                    <h3 class="text-xl font-bold text-slate-900 tracking-tight">Technology Stack</h3>
+                    <p class="text-slate-600 text-sm">Overview of applied languages, platforms, and frameworks.</p>
                 </div>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     <div class="glass-soft rounded-2xl p-5 space-y-3">
                         <div class="flex items-center gap-2.5">
                             <i class="fa-solid fa-code text-blue-600 text-sm" aria-hidden="true"></i>
-                            <span class="text-xs font-mono-tech text-slate-500 uppercase tracking-wider font-semibold">Sprachen, Web &amp; Data Systems</span>
+                            <span class="text-xs font-mono-tech text-slate-500 uppercase tracking-wider font-semibold">Languages, Web &amp; Data Systems</span>
                         </div>
                         <div class="flex flex-wrap gap-2">
                             <span class="px-2.5 py-1 rounded-full bg-white/70 border border-slate-200 text-xs font-medium text-slate-600">Python</span>
@@ -459,9 +459,9 @@
         <!-- Projekte Section -->
         <section id="projekte" class="scroll-mt-28 space-y-6">
             <div class="max-w-2xl space-y-3 px-2">
-                <span class="font-mono-tech text-xs tracking-widest text-blue-600 uppercase font-semibold">Projekte</span>
-                <h2 class="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight">Ausgewählte Projekte</h2>
-                <p class="text-slate-600">Lösungsorientierte Anwendungen – von der Datenarchitektur bis in den produktiven Betrieb.</p>
+                <span class="font-mono-tech text-xs tracking-widest text-blue-600 uppercase font-semibold">Projects</span>
+                <h2 class="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight">Selected Projects</h2>
+                <p class="text-slate-600">Solution-oriented applications—from data architecture to production deployment.</p>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -483,10 +483,10 @@
                             nutrition-fit.com
                             <i class="fa-solid fa-arrow-up-right-from-square text-xs text-slate-400 group-hover:text-blue-600 transition-colors" aria-hidden="true"></i>
                         </h3>
-                        <p class="text-xs font-mono-tech text-slate-500">Eigenentwicklung · KI-gestützte Ernährungs- &amp; Fitness-Plattform</p>
+                        <p class="text-xs font-mono-tech text-slate-500">Independent Project &middot; AI-Driven Nutrition &amp; Fitness Platform</p>
                     </div>
                     <p class="text-sm text-slate-600 leading-relaxed">
-                        Eigenständig konzipierte Webanwendung für Ernährungs- und Aktivitätstracking. Natürlichsprachliches Meal-Logging und automatisierte Ernährungsplanung über eine LLM-Integration, gestützt auf eine strukturierte Lebensmittel- und Aktivitätsdatenbank. Ein praktischer Beleg für lösungsorientierte KI-Tools – von der Datenmodellierung bis zur produktiven Anwendung.
+                        Independently designed web application for nutrition and activity tracking. Natural language meal logging and automated nutrition planning via LLM integration, supported by a structured food and activity database. A practical demonstration of solution-oriented AI tools—from data modeling to the productive application.
                     </p>
                     <div class="flex flex-wrap gap-2 pt-4 border-t border-slate-200/70">
                         <span class="px-2.5 py-1 rounded-full bg-white/70 border border-slate-200 text-xs font-medium text-slate-600">Python</span>
@@ -503,24 +503,24 @@
                         <div class="w-12 h-12 rounded-2xl bg-blue-50 border border-blue-100 flex items-center justify-center text-blue-600 text-lg">
                             <i class="fa-solid fa-diagram-project" aria-hidden="true"></i>
                         </div>
-                        <span class="text-xs font-mono-tech text-slate-400 font-semibold">AUSZUG</span>
+                        <span class="text-xs font-mono-tech text-slate-400 font-semibold">EXCERPT</span>
                     </div>
                     <div class="space-y-1">
-                        <h3 class="text-lg font-bold text-slate-900">Berufliche Projekte</h3>
-                        <p class="text-xs font-mono-tech text-slate-500">Controlling-Umfeld eines Unternehmensverbunds</p>
+                        <h3 class="text-lg font-bold text-slate-900">Professional Projects</h3>
+                        <p class="text-xs font-mono-tech text-slate-500">Controlling Environment of a Corporate Group</p>
                     </div>
                     <ul class="space-y-4 text-sm text-slate-600">
                         <li class="flex gap-3">
                             <i class="fa-solid fa-angle-right text-blue-500 mt-1 text-xs" aria-hidden="true"></i>
-                            <span><span class="text-slate-900 font-semibold">End-to-End BI &amp; Automatisierung</span> – Aufbau mehrerer Datenpipelines von der Datenbeschaffung bis zur Auswertung inkl. interaktiver Power-BI-Reports.</span>
+                            <span><span class="text-slate-900 font-semibold">End-to-End BI &amp; Automation</span> – Building multiple data pipelines from data ingestion to evaluation, including interactive Power BI reports.</span>
                         </li>
                         <li class="flex gap-3">
                             <i class="fa-solid fa-angle-right text-blue-500 mt-1 text-xs" aria-hidden="true"></i>
-                            <span><span class="text-slate-900 font-semibold">Reverse Engineering von Web-APIs</span> – Erschließung undokumentierter Schnittstellen inkl. Mapping, Authentifizierung und Synchronisationsläufen.</span>
+                            <span><span class="text-slate-900 font-semibold">Reverse Engineering of Web APIs</span> – Unlocking undocumented interfaces including mapping, authentication, and synchronization runs.</span>
                         </li>
                         <li class="flex gap-3">
                             <i class="fa-solid fa-angle-right text-blue-500 mt-1 text-xs" aria-hidden="true"></i>
-                            <span><span class="text-slate-900 font-semibold">Analytics-Web-App zur Potenzialanalyse</span> – betriebswirtschaftliche Modellierung als entscheidungsunterstützende Anwendung.</span>
+                            <span><span class="text-slate-900 font-semibold">Analytics Web App for Potential Analysis</span> – Business modeling as a decision support application.</span>
                         </li>
                     </ul>
                 </div>
@@ -531,14 +531,14 @@
                         <div class="w-12 h-12 rounded-2xl bg-blue-50 border border-blue-100 flex items-center justify-center text-blue-600 text-lg">
                             <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
                         </div>
-                        <span class="text-xs font-mono-tech text-blue-600 font-bold tracking-wider uppercase">Freelance Projekt</span>
+                        <span class="text-xs font-mono-tech text-blue-600 font-bold tracking-wider uppercase">Freelance Project</span>
                     </div>
                     <div class="space-y-1">
-                        <h3 class="text-xl font-bold text-slate-900">Automatisierung im Forderungsmanagement</h3>
-                        <p class="text-xs font-mono-tech text-slate-500">Unabhängige Beratung &amp; Implementierung</p>
+                        <h3 class="text-xl font-bold text-slate-900">Accounts Receivable Automation</h3>
+                        <p class="text-xs font-mono-tech text-slate-500">Independent Consulting &amp; Implementation</p>
                     </div>
                     <p class="text-sm text-slate-600 leading-relaxed md:text-base">
-                        Entwicklung einer Automatisierungslösung für das Forderungsmanagement eines Kunden. Der Prozess umfasste das automatisierte Einlesen und Verarbeiten von Creditreform-Daten aus Excel-Dateien (E-Mail-Eingang) sowie die anschließende programmatische Ausbuchung zahlungsunfähiger Debitoren über eine REST-API. Das Projekt ersetzte einen zeitaufwändigen manuellen Prozess durch eine zuverlässige, automatisierte Pipeline.
+                        Development of an automation solution for a client's accounts receivable management. The process involved automated reading and processing of credit agency data from Excel files (received via email) as well as the subsequent programmatic write-off of insolvent debtors via a REST API. The project replaced a time-consuming manual process with a reliable, automated pipeline.
                     </p>
                     <div class="flex flex-wrap gap-2 pt-4 border-t border-slate-200/70">
                         <span class="px-2.5 py-1 rounded-full bg-white/70 border border-slate-200 text-xs font-medium text-slate-600">Python</span>
@@ -555,9 +555,9 @@
         <section id="werdegang" class="scroll-mt-28">
             <div class="space-y-10 md:space-y-16 py-12 md:py-20 border-b border-slate-200/50">
                 <div class="max-w-2xl space-y-3">
-                    <span class="font-mono-tech text-xs tracking-widest text-blue-600 uppercase font-semibold">Werdegang</span>
-                    <h2 class="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight">Beruflicher Werdegang &amp; Ausbildung</h2>
-                    <p class="text-slate-600">Ein fokussierter Weg vom quantitativen Studium zur produktiven Datenarbeit.</p>
+                    <span class="font-mono-tech text-xs tracking-widest text-blue-600 uppercase font-semibold">Experience</span>
+                    <h2 class="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight">Professional Experience &amp; Education</h2>
+                    <p class="text-slate-600">A focused path from quantitative studies to productive data work.</p>
                 </div>
 
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -565,50 +565,50 @@
                     <!-- Berufserfahrung Timeline -->
                     <div class="space-y-6">
                         <h3 class="text-sm font-semibold text-slate-500 uppercase tracking-wider flex items-center gap-2">
-                            <i class="fa-solid fa-briefcase text-blue-600" aria-hidden="true"></i> Berufserfahrung
+                            <i class="fa-solid fa-briefcase text-blue-600" aria-hidden="true"></i> Professional Experience
                         </h3>
                         <ol class="relative border-l border-slate-200 space-y-8 pl-6">
                             <li class="relative">
                                 <span class="absolute -left-[1.65rem] top-1 w-3 h-3 rounded-full bg-blue-500 ring-4 ring-white" aria-hidden="true"></span>
-                                <div class="font-mono-tech text-xs text-blue-600">04.2026 – heute</div>
+                                <div class="font-mono-tech text-xs text-blue-600">04.2026 – present</div>
                                 <div class="text-slate-900 font-semibold">Consultant</div>
-                                <div class="text-sm text-slate-500">CareByte GmbH (Rodday-Family-Gruppe)</div>
-                                <p class="text-sm text-slate-600 mt-2">Beratung zu Daten- und Automatisierungslösungen innerhalb der Unternehmensgruppe.</p>
+                                <div class="text-sm text-slate-500">CareByte GmbH (Rodday Family Group)</div>
+                                <p class="text-sm text-slate-600 mt-2">Consulting on data and automation solutions within the corporate group.</p>
                             </li>
                             <li class="relative">
                                 <span class="absolute -left-[1.65rem] top-1 w-3 h-3 rounded-full bg-blue-400 ring-4 ring-white" aria-hidden="true"></span>
                                 <div class="font-mono-tech text-xs text-slate-500">01.2025 – 03.2026</div>
-                                <div class="text-slate-900 font-semibold">Data Scientist · Controlling</div>
+                                <div class="text-slate-900 font-semibold">Data Scientist &middot; Controlling</div>
                                 <div class="text-sm text-slate-500">Rodday Family GmbH</div>
                                 <ul class="mt-2 space-y-1.5 text-sm text-slate-600">
-                                    <li class="flex gap-2"><i class="fa-solid fa-angle-right text-blue-500 mt-1 text-[0.65rem]" aria-hidden="true"></i><span>End-to-End BI &amp; Automatisierung – Datenpipelines von der Beschaffung bis zur Auswertung.</span></li>
-                                    <li class="flex gap-2"><i class="fa-solid fa-angle-right text-blue-500 mt-1 text-[0.65rem]" aria-hidden="true"></i><span>Reverse Engineering von Web-APIs zur Anbindung undokumentierter Schnittstellen.</span></li>
-                                    <li class="flex gap-2"><i class="fa-solid fa-angle-right text-blue-500 mt-1 text-[0.65rem]" aria-hidden="true"></i><span>Analytics-Web-App zur Potenzialanalyse als Entscheidungsunterstützung.</span></li>
+                                    <li class="flex gap-2"><i class="fa-solid fa-angle-right text-blue-500 mt-1 text-[0.65rem]" aria-hidden="true"></i><span>End-to-End BI &amp; Automation – Data pipelines from ingestion to evaluation.</span></li>
+                                    <li class="flex gap-2"><i class="fa-solid fa-angle-right text-blue-500 mt-1 text-[0.65rem]" aria-hidden="true"></i><span>Reverse engineering of web APIs to connect undocumented interfaces.</span></li>
+                                    <li class="flex gap-2"><i class="fa-solid fa-angle-right text-blue-500 mt-1 text-[0.65rem]" aria-hidden="true"></i><span>Analytics web app for potential analysis as a decision support system.</span></li>
                                 </ul>
                             </li>
                             <li class="relative">
                                 <span class="absolute -left-[1.65rem] top-1 w-3 h-3 rounded-full bg-slate-300 ring-4 ring-white" aria-hidden="true"></span>
                                 <div class="font-mono-tech text-xs text-slate-500">01.2024 – 12.2024</div>
-                                <div class="text-slate-900 font-semibold">Werkstudent IT &amp; Finance</div>
+                                <div class="text-slate-900 font-semibold">Working Student IT &amp; Finance</div>
                                 <div class="text-sm text-slate-500">Rodday Wundmanagement GmbH</div>
-                                <p class="text-sm text-slate-600 mt-2">Schnittstelle zwischen IT und Finance: Datenaufbereitung, Reporting und Prozessautomatisierung.</p>
+                                <p class="text-sm text-slate-600 mt-2">Interface between IT and Finance: Data preparation, reporting, and process automation.</p>
                             </li>
                             <li class="relative">
                                 <span class="absolute -left-[1.65rem] top-1 w-3 h-3 rounded-full bg-slate-300 ring-4 ring-white" aria-hidden="true"></span>
                                 <div class="font-mono-tech text-xs text-slate-500">07.2022 – 12.2023</div>
-                                <div class="text-slate-900 font-semibold">Werkstudent Finance</div>
+                                <div class="text-slate-900 font-semibold">Working Student Finance</div>
                                 <div class="text-sm text-slate-500">PEARL GmbH</div>
                                 <ul class="mt-2 space-y-1.5 text-sm text-slate-600">
-                                    <li class="flex gap-2"><i class="fa-solid fa-angle-right text-blue-500 mt-1 text-[0.65rem]" aria-hidden="true"></i><span>Durchlaufzeit-Analyse importierter Produkte – von der Bestellung über die Verschiffung in China bis zum Wareneingang im Lager.</span></li>
+                                    <li class="flex gap-2"><i class="fa-solid fa-angle-right text-blue-500 mt-1 text-[0.65rem]" aria-hidden="true"></i><span>Lead time analysis of imported products—from ordering to shipping in China to goods receipt in the warehouse.</span></li>
                                 </ul>
                             </li>
                             <li class="relative">
                                 <span class="absolute -left-[1.65rem] top-1 w-3 h-3 rounded-full bg-slate-300 ring-4 ring-white" aria-hidden="true"></span>
                                 <div class="font-mono-tech text-xs text-slate-500">05.2016 – 11.2021</div>
-                                <div class="text-slate-900 font-semibold">Werkstudent Finance</div>
+                                <div class="text-slate-900 font-semibold">Working Student Finance</div>
                                 <div class="text-sm text-slate-500">Straumann GmbH</div>
                                 <ul class="mt-2 space-y-1.5 text-sm text-slate-600">
-                                    <li class="flex gap-2"><i class="fa-solid fa-angle-right text-blue-500 mt-1 text-[0.65rem]" aria-hidden="true"></i><span>Verantwortung für das Mahnwesen; Entwicklung eines VBA-Algorithmus zur Automatisierung des Mahnlaufs in SAP.</span></li>
+                                    <li class="flex gap-2"><i class="fa-solid fa-angle-right text-blue-500 mt-1 text-[0.65rem]" aria-hidden="true"></i><span>Responsibility for dunning processes; development of a VBA algorithm to automate the dunning run in SAP.</span></li>
                                 </ul>
                             </li>
                         </ol>
@@ -618,19 +618,19 @@
                     <div class="space-y-10">
                         <div class="space-y-6">
                             <h3 class="text-sm font-semibold text-slate-500 uppercase tracking-wider flex items-center gap-2">
-                                <i class="fa-solid fa-graduation-cap text-blue-600" aria-hidden="true"></i> Ausbildung
+                                <i class="fa-solid fa-graduation-cap text-blue-600" aria-hidden="true"></i> Education
                             </h3>
                             <ol class="relative border-l border-slate-200 space-y-8 pl-6">
                                 <li class="relative">
                                     <span class="absolute -left-[1.65rem] top-1 w-3 h-3 rounded-full bg-blue-400 ring-4 ring-white" aria-hidden="true"></span>
                                     <div class="font-mono-tech text-xs text-slate-500">10.2022 – 12.2024</div>
-                                    <div class="text-slate-900 font-semibold">Studium der Statistik &amp; Data Science</div>
-                                    <div class="text-sm text-slate-500">LMU München · Nebenfach Volkswirtschaftslehre</div>
+                                    <div class="text-slate-900 font-semibold">Studies in Statistics &amp; Data Science</div>
+                                    <div class="text-sm text-slate-500">LMU Munich &middot; Minor in Economics</div>
                                 </li>
                                 <li class="relative">
                                     <span class="absolute -left-[1.65rem] top-1 w-3 h-3 rounded-full bg-slate-300 ring-4 ring-white" aria-hidden="true"></span>
                                     <div class="font-mono-tech text-xs text-slate-500">10.2015 – 10.2022</div>
-                                    <div class="text-slate-900 font-semibold">Studium der Volkswirtschaftslehre</div>
+                                    <div class="text-slate-900 font-semibold">Studies in Economics</div>
                                     <div class="text-sm text-slate-500">Albert-Ludwigs-Universität Freiburg</div>
                                 </li>
                             </ol>
@@ -638,13 +638,13 @@
 
                         <div class="space-y-4">
                             <h3 class="text-sm font-semibold text-slate-500 uppercase tracking-wider flex items-center gap-2">
-                                <i class="fa-solid fa-language text-blue-600" aria-hidden="true"></i> Sprachen
+                                <i class="fa-solid fa-language text-blue-600" aria-hidden="true"></i> Languages
                             </h3>
                             <div class="flex flex-wrap gap-2">
-                                <span class="px-3 py-1.5 rounded-full bg-white/70 border border-slate-200 text-xs font-medium text-slate-600">Deutsch · Muttersprache</span>
-                                <span class="px-3 py-1.5 rounded-full bg-white/70 border border-slate-200 text-xs font-medium text-slate-600">Englisch · Verhandlungssicher</span>
-                                <span class="px-3 py-1.5 rounded-full bg-white/70 border border-slate-200 text-xs font-medium text-slate-600">Italienisch · Grundkenntnisse</span>
-                                <span class="px-3 py-1.5 rounded-full bg-white/70 border border-slate-200 text-xs font-medium text-slate-600">Französisch · Grundkenntnisse</span>
+                                <span class="px-3 py-1.5 rounded-full bg-white/70 border border-slate-200 text-xs font-medium text-slate-600">German &middot; Native</span>
+                                <span class="px-3 py-1.5 rounded-full bg-white/70 border border-slate-200 text-xs font-medium text-slate-600">English &middot; Fluent / C1</span>
+                                <span class="px-3 py-1.5 rounded-full bg-white/70 border border-slate-200 text-xs font-medium text-slate-600">Italian &middot; Basic</span>
+                                <span class="px-3 py-1.5 rounded-full bg-white/70 border border-slate-200 text-xs font-medium text-slate-600">French &middot; Basic</span>
                             </div>
                         </div>
                     </div>
@@ -658,10 +658,10 @@
                 <figure class="max-w-3xl mx-auto text-center space-y-6">
                     <i class="fa-solid fa-quote-left text-blue-500/40 text-3xl" aria-hidden="true"></i>
                     <blockquote class="text-lg md:text-xl text-slate-700 leading-relaxed">
-                        „Besonders hervorzuheben ist seine Fähigkeit, End-to-End-Lösungen von der Anforderungsanalyse über die technische Implementierung bis zur erfolgreichen Überführung in den produktiven Betrieb umzusetzen. Durch seine Automatisierungen, Reports und Integrationslösungen wurden manuelle Aufwände reduziert und die Datenverfügbarkeit sowie Transparenz in Steuerungsprozessen spürbar verbessert.“
+                        "Particularly noteworthy is his ability to implement end-to-end solutions—from requirements analysis to technical implementation and successful transfer into production. Through his automations, reports, and integration solutions, manual efforts were reduced, and data availability as well as transparency in control processes were noticeably improved."
                     </blockquote>
                     <figcaption class="font-mono-tech text-xs tracking-wider text-slate-500 uppercase">
-                        — Auszug aus einem Arbeitszeugnis, 2026
+                        — Excerpt from an employment reference, 2026
                     </figcaption>
                 </figure>
             </div>
@@ -671,17 +671,17 @@
         <section id="kontakt" class="scroll-mt-28">
             <div class="py-12 md:py-20 text-center">
                 <div class="max-w-2xl mx-auto space-y-6">
-                    <span class="font-mono-tech text-xs tracking-widest text-blue-600 uppercase font-semibold">Architekturdialog</span>
+                    <span class="font-mono-tech text-xs tracking-widest text-blue-600 uppercase font-semibold">Architecture Dialogue</span>
                     <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 tracking-tight">
-                        Offen für fachlichen Austausch und anspruchsvolle Architektur-Themen.
+                        Open for professional exchange and complex architecture topics.
                     </h2>
                     <p class="text-slate-600 leading-relaxed">
-                        Ob komplexe Datenmigration, Bewertung einer bestehenden ETL-Architektur oder intelligente Prozessautomatisierung – ich freue mich auf ein unverbindliches Gespräch.
+                        Whether it's a complex data migration, evaluating an existing ETL architecture, or intelligent process automation—I look forward to a non-binding conversation.
                     </p>
                     <div class="pt-4">
-                        <a href="mailto:stubanus@googlemail.com?subject=Anfrage%20Datenarchitektur%20%2F%20Automatisierung" class="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-slate-900 hover:bg-slate-700 text-white font-semibold text-sm transition-all duration-200 hover:scale-[1.02]">
+                        <a href="mailto:stubanus@googlemail.com?subject=Inquiry%20Data%20Architecture%20%2F%20Automation" class="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-slate-900 hover:bg-slate-700 text-white font-semibold text-sm transition-all duration-200 hover:scale-[1.02]">
                             <i class="fa-regular fa-envelope text-base" aria-hidden="true"></i>
-                            Kontakt initiieren
+                            Initiate Contact
                         </a>
                     </div>
                 </div>
@@ -693,14 +693,14 @@
     <!-- Footer -->
     <footer class="py-8 text-center text-xs text-slate-500">
         <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p>&copy; 2026 Alexander Stubanus. Alle Rechte vorbehalten.</p>
+            <p>&copy; 2026 Alexander Stubanus. All rights reserved.</p>
             <nav class="flex flex-wrap justify-center gap-6" aria-label="Footer-Navigation">
                 <a href="#home" class="hover:text-slate-900 transition-colors">Home</a>
-                <a href="#philosophie" class="hover:text-slate-900 transition-colors">Profil</a>
+                <a href="#philosophie" class="hover:text-slate-900 transition-colors">Profile</a>
                 <a href="#expertise" class="hover:text-slate-900 transition-colors">Expertise</a>
-                <a href="#projekte" class="hover:text-slate-900 transition-colors">Projekte</a>
-                <a href="#werdegang" class="hover:text-slate-900 transition-colors">Werdegang</a>
-                <a href="#kontakt" class="hover:text-slate-900 transition-colors">Kontakt</a>
+                <a href="#projekte" class="hover:text-slate-900 transition-colors">Projects</a>
+                <a href="#werdegang" class="hover:text-slate-900 transition-colors">Experience</a>
+                <a href="#kontakt" class="hover:text-slate-900 transition-colors">Contact</a>
             </nav>
         </div>
     </footer>
@@ -735,13 +735,13 @@
                         mobileMenuIcon.classList.remove('fa-bars');
                         mobileMenuIcon.classList.add('fa-xmark');
                         mobileMenuBtn.setAttribute('aria-expanded', 'true');
-                        mobileMenuBtn.setAttribute('aria-label', 'Menü schließen');
+                        mobileMenuBtn.setAttribute('aria-label', 'Close menu');
                     } else {
                         mobileMenu.classList.add('hidden');
                         mobileMenuIcon.classList.remove('fa-xmark');
                         mobileMenuIcon.classList.add('fa-bars');
                         mobileMenuBtn.setAttribute('aria-expanded', 'false');
-                        mobileMenuBtn.setAttribute('aria-label', 'Menü öffnen');
+                        mobileMenuBtn.setAttribute('aria-label', 'Open menu');
                     }
                 }
             };
