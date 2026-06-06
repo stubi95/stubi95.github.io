@@ -149,6 +149,13 @@
     </style>
 </head>
 <body class="text-slate-800 antialiased selection:bg-indigo-600/20 selection:text-indigo-900">
+    <!-- Ambient Glassmorphism Background Blobs -->
+    <div class="fixed inset-0 -z-10 overflow-hidden pointer-events-none bg-slate-50">
+        <div class="absolute -top-[10%] -left-[10%] w-[50vw] h-[50vw] rounded-full bg-blue-200/40 blur-[100px] mix-blend-multiply"></div>
+        <div class="absolute top-[20%] -right-[10%] w-[40vw] h-[40vw] rounded-full bg-indigo-200/40 blur-[100px] mix-blend-multiply"></div>
+        <div class="absolute -bottom-[10%] left-[20%] w-[60vw] h-[60vw] rounded-full bg-cyan-100/50 blur-[120px] mix-blend-multiply"></div>
+    </div>
+
 
     <!-- Skip link for keyboard / screenreader users -->
     <a href="#home" class="sr-only focus:not-sr-only focus:absolute focus:z-[60] focus:top-3 focus:left-3 focus:px-4 focus:py-2 focus:rounded focus:bg-indigo-600 focus:text-slate-950 focus:font-semibold">
@@ -156,7 +163,7 @@
     </a>
 
     <!-- Sticky Navigation -->
-    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-slate-200/60 backdrop-blur-md bg-slate-50 bg-gradient-to-br from-slate-50 to-indigo-50/50/75" id="nav-header">
+    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-slate-200/60 backdrop-blur-md bg-white/60" id="nav-header">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
             <a href="#home" class="flex items-center gap-2 group" aria-label="Alexander Stubanus – Startseite">
                 <span class="w-8 h-8 rounded bg-gradient-to-br from-indigo-400 to-blue-600 flex items-center justify-center text-slate-900 font-bold text-lg shadow-[0_0_15px_rgba(99,102,241,0.3)] transition-transform group-hover:scale-105">
@@ -189,7 +196,7 @@
         </div>
 
         <!-- Mobile Drawer -->
-        <div class="hidden lg:hidden border-t border-slate-200/60 bg-slate-50 bg-gradient-to-br from-slate-50 to-indigo-50/50/95 px-6 py-6 space-y-4 shadow-xl" id="mobile-menu">
+        <div class="hidden lg:hidden border-t border-slate-200/60 bg-white/80 px-6 py-6 space-y-4 shadow-xl" id="mobile-menu">
             <nav class="flex flex-col gap-4 text-base font-medium" aria-label="Mobile Navigation">
                 <a href="#home" class="text-slate-500 hover:text-slate-900 transition-colors py-1" onclick="toggleMobileMenu()">Home</a>
                 <a href="#philosophie" class="text-slate-500 hover:text-slate-900 transition-colors py-1" onclick="toggleMobileMenu()">Philosophie</a>
@@ -281,15 +288,15 @@
 
                     <!-- Stats Grid -->
                     <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-6 text-left">
-                        <div class="p-4 rounded border border-slate-200/60 bg-white/70 backdrop-blur-md shadow-sm border border-white/60">
+                        <div class="p-4 rounded border border-slate-200/60 bg-white/40 backdrop-blur-xl shadow-[0_8px_32px_rgba(31,38,135,0.05)] border border-white/60">
                             <div class="text-3xl font-extrabold text-slate-900 font-mono-tech">5<span class="text-indigo-600">J.</span></div>
                             <div class="text-xs text-slate-500 uppercase tracking-wider font-mono-tech mt-1">Fokus Data, AI &amp; RPA</div>
                         </div>
-                        <div class="p-4 rounded border border-slate-200/60 bg-white/70 backdrop-blur-md shadow-sm border border-white/60">
+                        <div class="p-4 rounded border border-slate-200/60 bg-white/40 backdrop-blur-xl shadow-[0_8px_32px_rgba(31,38,135,0.05)] border border-white/60">
                             <div class="text-3xl font-extrabold text-slate-900 font-mono-tech">2<span class="text-indigo-600">J.</span></div>
                             <div class="text-xs text-slate-500 uppercase tracking-wider font-mono-tech mt-1">Vollzeit-Professional</div>
                         </div>
-                        <div class="p-4 rounded border border-slate-200/60 bg-white/70 backdrop-blur-md shadow-sm border border-white/60">
+                        <div class="p-4 rounded border border-slate-200/60 bg-white/40 backdrop-blur-xl shadow-[0_8px_32px_rgba(31,38,135,0.05)] border border-white/60">
                             <div class="text-3xl font-extrabold text-slate-900 font-mono-tech">4</div>
                             <div class="text-xs text-slate-500 uppercase tracking-wider font-mono-tech mt-1">Kernkompetenz-Felder</div>
                         </div>
@@ -314,7 +321,7 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 
                     <!-- Card 1: Data Architecture & Integration -->
-                    <div class="group relative rounded-xl border border-slate-200/60 bg-white/60 backdrop-blur-md shadow-sm border border-white/60 p-8 space-y-6 hover:border-indigo-500/30 hover:shadow-[0_0_30px_rgba(99,102,241,0.08)] transition-all duration-300">
+                    <div class="group relative rounded-xl border border-slate-200/60 bg-white/40 backdrop-blur-xl shadow-[0_8px_32px_rgba(31,38,135,0.05)] border border-white/60 p-8 space-y-6 hover:border-indigo-500/30 hover:shadow-[0_0_30px_rgba(99,102,241,0.08)] transition-all duration-300">
                         <div class="flex items-center justify-between">
                             <div class="w-12 h-12 rounded bg-indigo-50/80 border border-indigo-500/20 flex items-center justify-center text-indigo-600 text-lg shadow-[0_0_10px_rgba(99,102,241,0.1)] group-hover:scale-105 transition-transform">
                                 <i class="fa-solid fa-network-wired" aria-hidden="true"></i>
@@ -332,16 +339,16 @@
                         </p>
                         <!-- Tech stack tag cloud -->
                         <div class="flex flex-wrap gap-2 pt-4 border-t border-slate-200/60">
-                            <span class="px-2 py-1 rounded bg-white/80 backdrop-blur-sm shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">Python</span>
-                            <span class="px-2 py-1 rounded bg-white/80 backdrop-blur-sm shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">SQL</span>
-                            <span class="px-2 py-1 rounded bg-white/80 backdrop-blur-sm shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">REST APIs</span>
-                            <span class="px-2 py-1 rounded bg-white/80 backdrop-blur-sm shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">Power Automate</span>
-                            <span class="px-2 py-1 rounded bg-white/80 backdrop-blur-sm shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">Microsoft Azure</span>
+                            <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">Python</span>
+                            <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">SQL</span>
+                            <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">REST APIs</span>
+                            <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">Power Automate</span>
+                            <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">Microsoft Azure</span>
                         </div>
                     </div>
 
                     <!-- Card 2: Data Engineering & Analytics -->
-                    <div class="group relative rounded-xl border border-slate-200/60 bg-white/60 backdrop-blur-md shadow-sm border border-white/60 p-8 space-y-6 hover:border-indigo-500/30 hover:shadow-[0_0_30px_rgba(99,102,241,0.08)] transition-all duration-300">
+                    <div class="group relative rounded-xl border border-slate-200/60 bg-white/40 backdrop-blur-xl shadow-[0_8px_32px_rgba(31,38,135,0.05)] border border-white/60 p-8 space-y-6 hover:border-indigo-500/30 hover:shadow-[0_0_30px_rgba(99,102,241,0.08)] transition-all duration-300">
                         <div class="flex items-center justify-between">
                             <div class="w-12 h-12 rounded bg-indigo-50/80 border border-indigo-500/20 flex items-center justify-center text-indigo-600 text-lg shadow-[0_0_10px_rgba(99,102,241,0.1)] group-hover:scale-105 transition-transform">
                                 <i class="fa-solid fa-server" aria-hidden="true"></i>
@@ -359,17 +366,17 @@
                         </p>
                         <!-- Tech stack tag cloud -->
                         <div class="flex flex-wrap gap-2 pt-4 border-t border-slate-200/60">
-                            <span class="px-2 py-1 rounded bg-white/80 backdrop-blur-sm shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">Power BI</span>
-                            <span class="px-2 py-1 rounded bg-white/80 backdrop-blur-sm shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">Microsoft Fabric</span>
-                            <span class="px-2 py-1 rounded bg-white/80 backdrop-blur-sm shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">SQL</span>
-                            <span class="px-2 py-1 rounded bg-white/80 backdrop-blur-sm shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">Python</span>
-                            <span class="px-2 py-1 rounded bg-white/80 backdrop-blur-sm shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">R</span>
-                            <span class="px-2 py-1 rounded bg-white/80 backdrop-blur-sm shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">Microsoft Azure</span>
+                            <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">Power BI</span>
+                            <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">Microsoft Fabric</span>
+                            <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">SQL</span>
+                            <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">Python</span>
+                            <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">R</span>
+                            <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">Microsoft Azure</span>
                         </div>
                     </div>
 
                     <!-- Card 3: AI & Data Science -->
-                    <div class="group relative rounded-xl border border-slate-200/60 bg-white/60 backdrop-blur-md shadow-sm border border-white/60 p-8 space-y-6 hover:border-indigo-500/30 hover:shadow-[0_0_30px_rgba(99,102,241,0.08)] transition-all duration-300">
+                    <div class="group relative rounded-xl border border-slate-200/60 bg-white/40 backdrop-blur-xl shadow-[0_8px_32px_rgba(31,38,135,0.05)] border border-white/60 p-8 space-y-6 hover:border-indigo-500/30 hover:shadow-[0_0_30px_rgba(99,102,241,0.08)] transition-all duration-300">
                         <div class="flex items-center justify-between">
                             <div class="w-12 h-12 rounded bg-indigo-50/80 border border-indigo-500/20 flex items-center justify-center text-indigo-600 text-lg shadow-[0_0_10px_rgba(99,102,241,0.1)] group-hover:scale-105 transition-transform">
                                 <i class="fa-solid fa-brain" aria-hidden="true"></i>
@@ -387,16 +394,16 @@
                         </p>
                         <!-- Tech stack tag cloud -->
                         <div class="flex flex-wrap gap-2 pt-4 border-t border-slate-200/60">
-                            <span class="px-2 py-1 rounded bg-white/80 backdrop-blur-sm shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">XGBoost</span>
-                            <span class="px-2 py-1 rounded bg-white/80 backdrop-blur-sm shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">CatBoost</span>
-                            <span class="px-2 py-1 rounded bg-white/80 backdrop-blur-sm shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">Prophet</span>
-                            <span class="px-2 py-1 rounded bg-white/80 backdrop-blur-sm shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">LSTM</span>
-                            <span class="px-2 py-1 rounded bg-white/80 backdrop-blur-sm shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">LLM-Integration</span>
+                            <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">XGBoost</span>
+                            <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">CatBoost</span>
+                            <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">Prophet</span>
+                            <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">LSTM</span>
+                            <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">LLM-Integration</span>
                         </div>
                     </div>
 
                     <!-- Card 4: RPA (Robotic Process Automation) -->
-                    <div class="group relative rounded-xl border border-slate-200/60 bg-white/60 backdrop-blur-md shadow-sm border border-white/60 p-8 space-y-6 hover:border-indigo-500/30 hover:shadow-[0_0_30px_rgba(99,102,241,0.08)] transition-all duration-300">
+                    <div class="group relative rounded-xl border border-slate-200/60 bg-white/40 backdrop-blur-xl shadow-[0_8px_32px_rgba(31,38,135,0.05)] border border-white/60 p-8 space-y-6 hover:border-indigo-500/30 hover:shadow-[0_0_30px_rgba(99,102,241,0.08)] transition-all duration-300">
                         <div class="flex items-center justify-between">
                             <div class="w-12 h-12 rounded bg-indigo-50/80 border border-indigo-500/20 flex items-center justify-center text-indigo-600 text-lg shadow-[0_0_10px_rgba(99,102,241,0.1)] group-hover:scale-105 transition-transform">
                                 <i class="fa-solid fa-robot" aria-hidden="true"></i>
@@ -414,11 +421,11 @@
                         </p>
                         <!-- Tech stack tag cloud -->
                         <div class="flex flex-wrap gap-2 pt-4 border-t border-slate-200/60">
-                            <span class="px-2 py-1 rounded bg-white/80 backdrop-blur-sm shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">Power Automate</span>
-                            <span class="px-2 py-1 rounded bg-white/80 backdrop-blur-sm shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">RPA / Bot-Skripte</span>
-                            <span class="px-2 py-1 rounded bg-white/80 backdrop-blur-sm shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">Python</span>
-                            <span class="px-2 py-1 rounded bg-white/80 backdrop-blur-sm shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">REST APIs</span>
-                            <span class="px-2 py-1 rounded bg-white/80 backdrop-blur-sm shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">VBA</span>
+                            <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">Power Automate</span>
+                            <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">RPA / Bot-Skripte</span>
+                            <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">Python</span>
+                            <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">REST APIs</span>
+                            <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">VBA</span>
                         </div>
                     </div>
 
@@ -433,65 +440,65 @@
 
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                         <!-- Sprachen & Datenbanken -->
-                        <div class="rounded-xl border border-slate-200/60 bg-white/60 backdrop-blur-md shadow-sm border border-white/60 p-6 space-y-4">
+                        <div class="rounded-xl border border-slate-200/60 bg-white/40 backdrop-blur-xl shadow-[0_8px_32px_rgba(31,38,135,0.05)] border border-white/60 p-6 space-y-4">
                             <div class="flex items-center gap-3">
                                 <i class="fa-solid fa-code text-indigo-600 text-sm" aria-hidden="true"></i>
                                 <span class="text-xs font-mono-tech text-slate-500 uppercase tracking-wider font-semibold">Sprachen &amp; Datenbanken</span>
                             </div>
                             <div class="flex flex-wrap gap-2">
-                                <span class="px-2 py-1 rounded bg-white/80 backdrop-blur-sm shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">Python</span>
-                                <span class="px-2 py-1 rounded bg-white/80 backdrop-blur-sm shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">SQL</span>
-                                <span class="px-2 py-1 rounded bg-white/80 backdrop-blur-sm shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">R</span>
-                                <span class="px-2 py-1 rounded bg-white/80 backdrop-blur-sm shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">VBA</span>
-                                <span class="px-2 py-1 rounded bg-white/80 backdrop-blur-sm shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">Git</span>
+                                <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">Python</span>
+                                <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">SQL</span>
+                                <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">R</span>
+                                <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">VBA</span>
+                                <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">Git</span>
                             </div>
                         </div>
 
                         <!-- Microsoft & Cloud -->
-                        <div class="rounded-xl border border-slate-200/60 bg-white/60 backdrop-blur-md shadow-sm border border-white/60 p-6 space-y-4">
+                        <div class="rounded-xl border border-slate-200/60 bg-white/40 backdrop-blur-xl shadow-[0_8px_32px_rgba(31,38,135,0.05)] border border-white/60 p-6 space-y-4">
                             <div class="flex items-center gap-3">
                                 <i class="fa-solid fa-cloud text-indigo-600 text-sm" aria-hidden="true"></i>
                                 <span class="text-xs font-mono-tech text-slate-500 uppercase tracking-wider font-semibold">Microsoft &amp; Cloud</span>
                             </div>
                             <div class="flex flex-wrap gap-2">
-                                <span class="px-2 py-1 rounded bg-white/80 backdrop-blur-sm shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">Microsoft Azure</span>
-                                <span class="px-2 py-1 rounded bg-white/80 backdrop-blur-sm shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">Microsoft Fabric</span>
-                                <span class="px-2 py-1 rounded bg-white/80 backdrop-blur-sm shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">Power BI</span>
-                                <span class="px-2 py-1 rounded bg-white/80 backdrop-blur-sm shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">Power Apps</span>
-                                <span class="px-2 py-1 rounded bg-white/80 backdrop-blur-sm shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">Power Automate</span>
-                                <span class="px-2 py-1 rounded bg-white/80 backdrop-blur-sm shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">MS Office</span>
+                                <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">Microsoft Azure</span>
+                                <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">Microsoft Fabric</span>
+                                <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">Power BI</span>
+                                <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">Power Apps</span>
+                                <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">Power Automate</span>
+                                <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">MS Office</span>
                             </div>
                         </div>
 
                         <!-- Machine Learning & Forecasting -->
-                        <div class="rounded-xl border border-slate-200/60 bg-white/60 backdrop-blur-md shadow-sm border border-white/60 p-6 space-y-4">
+                        <div class="rounded-xl border border-slate-200/60 bg-white/40 backdrop-blur-xl shadow-[0_8px_32px_rgba(31,38,135,0.05)] border border-white/60 p-6 space-y-4">
                             <div class="flex items-center gap-3">
                                 <i class="fa-solid fa-chart-line text-indigo-600 text-sm" aria-hidden="true"></i>
                                 <span class="text-xs font-mono-tech text-slate-500 uppercase tracking-wider font-semibold">Machine Learning &amp; Forecasting</span>
                             </div>
                             <div class="flex flex-wrap gap-2">
-                                <span class="px-2 py-1 rounded bg-white/80 backdrop-blur-sm shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">XGBoost</span>
-                                <span class="px-2 py-1 rounded bg-white/80 backdrop-blur-sm shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">CatBoost</span>
-                                <span class="px-2 py-1 rounded bg-white/80 backdrop-blur-sm shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">Random Forest</span>
-                                <span class="px-2 py-1 rounded bg-white/80 backdrop-blur-sm shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">KNN</span>
-                                <span class="px-2 py-1 rounded bg-white/80 backdrop-blur-sm shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">Prophet</span>
-                                <span class="px-2 py-1 rounded bg-white/80 backdrop-blur-sm shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">ARIMA</span>
-                                <span class="px-2 py-1 rounded bg-white/80 backdrop-blur-sm shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">LSTM</span>
-                                <span class="px-2 py-1 rounded bg-white/80 backdrop-blur-sm shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">TFT</span>
-                                <span class="px-2 py-1 rounded bg-white/80 backdrop-blur-sm shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">NEAT</span>
+                                <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">XGBoost</span>
+                                <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">CatBoost</span>
+                                <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">Random Forest</span>
+                                <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">KNN</span>
+                                <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">Prophet</span>
+                                <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">ARIMA</span>
+                                <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">LSTM</span>
+                                <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">TFT</span>
+                                <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">NEAT</span>
                             </div>
                         </div>
 
                         <!-- AI-Tooling -->
-                        <div class="rounded-xl border border-slate-200/60 bg-white/60 backdrop-blur-md shadow-sm border border-white/60 p-6 space-y-4">
+                        <div class="rounded-xl border border-slate-200/60 bg-white/40 backdrop-blur-xl shadow-[0_8px_32px_rgba(31,38,135,0.05)] border border-white/60 p-6 space-y-4">
                             <div class="flex items-center gap-3">
                                 <i class="fa-solid fa-wand-magic-sparkles text-indigo-600 text-sm" aria-hidden="true"></i>
                                 <span class="text-xs font-mono-tech text-slate-500 uppercase tracking-wider font-semibold">AI-Tooling</span>
                             </div>
                             <div class="flex flex-wrap gap-2">
-                                <span class="px-2 py-1 rounded bg-white/80 backdrop-blur-sm shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">Claude Code</span>
-                                <span class="px-2 py-1 rounded bg-white/80 backdrop-blur-sm shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">Codex</span>
-                                <span class="px-2 py-1 rounded bg-white/80 backdrop-blur-sm shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">Antigravity</span>
+                                <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">Claude Code</span>
+                                <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">Codex</span>
+                                <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">Antigravity</span>
                             </div>
                         </div>
                     </div>
@@ -593,10 +600,10 @@
                                 <i class="fa-solid fa-language text-indigo-600" aria-hidden="true"></i> Sprachen
                             </h3>
                             <div class="flex flex-wrap gap-2">
-                                <span class="px-3 py-1.5 rounded bg-white/80 backdrop-blur-sm shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">Deutsch · Muttersprache</span>
-                                <span class="px-3 py-1.5 rounded bg-white/80 backdrop-blur-sm shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">Englisch · Verhandlungssicher</span>
-                                <span class="px-3 py-1.5 rounded bg-white/80 backdrop-blur-sm shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">Italienisch · Grundkenntnisse</span>
-                                <span class="px-3 py-1.5 rounded bg-white/80 backdrop-blur-sm shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">Französisch · Grundkenntnisse</span>
+                                <span class="px-3 py-1.5 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">Deutsch · Muttersprache</span>
+                                <span class="px-3 py-1.5 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">Englisch · Verhandlungssicher</span>
+                                <span class="px-3 py-1.5 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">Italienisch · Grundkenntnisse</span>
+                                <span class="px-3 py-1.5 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">Französisch · Grundkenntnisse</span>
                             </div>
                         </div>
                     </div>
@@ -621,7 +628,7 @@
 
                     <!-- Project Card: nutrition-fit.com -->
                     <a href="https://nutrition-fit.com" target="_blank" rel="noopener noreferrer"
-                       class="group relative rounded-xl border border-slate-200/60 bg-white/60 backdrop-blur-md shadow-sm border border-white/60 p-8 space-y-6 hover:border-indigo-500/30 hover:shadow-[0_0_30px_rgba(99,102,241,0.08)] transition-all duration-300 block">
+                       class="group relative rounded-xl border border-slate-200/60 bg-white/40 backdrop-blur-xl shadow-[0_8px_32px_rgba(31,38,135,0.05)] border border-white/60 p-8 space-y-6 hover:border-indigo-500/30 hover:shadow-[0_0_30px_rgba(99,102,241,0.08)] transition-all duration-300 block">
                         <div class="flex items-center justify-between">
                             <div class="w-12 h-12 rounded bg-indigo-50/80 border border-indigo-500/20 flex items-center justify-center text-indigo-600 text-lg shadow-[0_0_10px_rgba(99,102,241,0.1)] group-hover:scale-105 transition-transform">
                                 <i class="fa-solid fa-utensils" aria-hidden="true"></i>
@@ -643,16 +650,16 @@
                         </p>
                         <!-- Tech stack tag cloud -->
                         <div class="flex flex-wrap gap-2 pt-4 border-t border-slate-200/60">
-                            <span class="px-2 py-1 rounded bg-white/80 backdrop-blur-sm shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">Python</span>
-                            <span class="px-2 py-1 rounded bg-white/80 backdrop-blur-sm shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">Flask</span>
-                            <span class="px-2 py-1 rounded bg-white/80 backdrop-blur-sm shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">LLM-Integration</span>
-                            <span class="px-2 py-1 rounded bg-white/80 backdrop-blur-sm shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">SQL</span>
-                            <span class="px-2 py-1 rounded bg-white/80 backdrop-blur-sm shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">REST API</span>
+                            <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">Python</span>
+                            <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">Flask</span>
+                            <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">LLM-Integration</span>
+                            <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">SQL</span>
+                            <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">REST API</span>
                         </div>
                     </a>
 
                     <!-- Berufliche Projekte (Auszug) -->
-                    <div class="rounded-xl border border-slate-200/60 bg-white/60 backdrop-blur-md shadow-sm border border-white/60 p-8 space-y-6">
+                    <div class="rounded-xl border border-slate-200/60 bg-white/40 backdrop-blur-xl shadow-[0_8px_32px_rgba(31,38,135,0.05)] border border-white/60 p-8 space-y-6">
                         <div class="flex items-center justify-between">
                             <div class="w-12 h-12 rounded bg-indigo-50/80 border border-indigo-500/20 flex items-center justify-center text-indigo-600 text-lg shadow-[0_0_10px_rgba(99,102,241,0.1)]">
                                 <i class="fa-solid fa-diagram-project" aria-hidden="true"></i>
@@ -725,7 +732,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="border-t border-slate-200/60 bg-slate-50 bg-gradient-to-br from-slate-50 to-indigo-50/50 py-8 text-center text-xs text-slate-500 font-mono-tech">
+    <footer class="border-t border-slate-200/60 bg-transparent py-8 text-center text-xs text-slate-500 font-mono-tech">
         <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
             <p>&copy; 2026 Alexander Stubanus. Alle Rechte vorbehalten.</p>
             <nav class="flex flex-wrap justify-center gap-6 text-slate-500" aria-label="Footer-Navigation">
@@ -750,11 +757,11 @@
             // 1. Navbar Scroll Style Adjustment
             const handleScroll = () => {
                 if (window.scrollY > 20) {
-                    header.classList.add('bg-slate-50 bg-gradient-to-br from-slate-50 to-indigo-50/50/90', 'shadow-lg');
-                    header.classList.remove('bg-slate-50 bg-gradient-to-br from-slate-50 to-indigo-50/50/75');
+                    header.classList.add('bg-transparent/90', 'shadow-lg');
+                    header.classList.remove('bg-white/60');
                 } else {
-                    header.classList.remove('bg-slate-50 bg-gradient-to-br from-slate-50 to-indigo-50/50/90', 'shadow-lg');
-                    header.classList.add('bg-slate-50 bg-gradient-to-br from-slate-50 to-indigo-50/50/75');
+                    header.classList.remove('bg-transparent/90', 'shadow-lg');
+                    header.classList.add('bg-white/60');
                 }
             };
             window.addEventListener('scroll', handleScroll, { passive: true });
