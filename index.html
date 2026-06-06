@@ -19,6 +19,7 @@
     <meta property="og:title" content="Alexander Stubanus | Data Integration & AI Engineer">
     <meta property="og:description" content="Datenarchitekturen, ETL-Pipelines und intelligente Automatisierung. Data-, AI- und RPA-Engineer.">
     <meta property="og:url" content="https://www.alexander-stubanus.de/">
+    <meta property="og:image" content="https://www.alexander-stubanus.de/portrait.png">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary">
@@ -35,6 +36,7 @@
         "description": "Engineer für Data Integration, ETL, AI und RPA. Spezialisiert auf Hub-and-Spoke-Datenarchitekturen und automatisierte Reporting-Frameworks.",
         "email": "mailto:stubanus@googlemail.com",
         "url": "https://www.alexander-stubanus.de/",
+        "image": "https://www.alexander-stubanus.de/portrait.png",
         "knowsLanguage": ["Deutsch", "Englisch", "Italienisch", "Französisch"],
         "knowsAbout": [
             "Data Integration",
@@ -69,113 +71,66 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f8fafc;
+            color: #334155; /* slate-700 */
+            background-color: #eef2f8;
             background-image:
-                radial-gradient(circle at 10% 20%, rgba(99, 102, 241, 0.05) 0%, transparent 40%),
-                radial-gradient(circle at 90% 80%, rgba(59, 130, 246, 0.05) 0%, transparent 40%);
+                radial-gradient(circle at 12% 18%, rgba(59, 130, 246, 0.10) 0%, transparent 42%),
+                radial-gradient(circle at 88% 12%, rgba(99, 102, 241, 0.08) 0%, transparent 40%),
+                radial-gradient(circle at 78% 88%, rgba(56, 189, 248, 0.08) 0%, transparent 45%),
+                linear-gradient(135deg, #eef2f8 0%, #e6ecf5 45%, #dde6f2 100%);
             background-attachment: fixed;
-        }
-
-        .tech-grid {
-            background-size: 40px 40px;
-            background-image:
-                linear-gradient(to right, rgba(0, 0, 0, 0.02) 1px, transparent 1px),
-                linear-gradient(to bottom, rgba(0, 0, 0, 0.02) 1px, transparent 1px);
         }
 
         .font-mono-tech {
             font-family: 'JetBrains Mono', monospace;
         }
 
+        /* Frosted-glass card helper */
+        .glass {
+            background: rgba(255, 255, 255, 0.55);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.7);
+            box-shadow: 0 18px 40px -20px rgba(30, 41, 59, 0.25);
+        }
+        .glass-soft {
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+        }
+
         /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-            width: 6px;
-            height: 6px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #f8fafc;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #cbd5e1;
-            border-radius: 3px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #94a3b8;
-        }
+        ::-webkit-scrollbar { width: 8px; height: 8px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
 
-        /* Hub-and-Spoke Animation Styles */
-        @keyframes flowDash {
-            to {
-                stroke-dashoffset: -20;
-            }
-        }
-        .animate-flow-in {
-            stroke-dasharray: 6, 4;
-            animation: flowDash 1.5s linear infinite;
-        }
-        .animate-flow-out {
-            stroke-dasharray: 6, 4;
-            animation: flowDash 2.5s linear infinite;
-        }
-        @keyframes pulseGlow {
-            0%, 100% {
-                transform: scale(1);
-                opacity: 0.8;
-                filter: drop-shadow(0 0 2px rgba(6, 182, 212, 0.6));
-            }
-            50% {
-                transform: scale(1.1);
-                opacity: 1;
-                filter: drop-shadow(0 0 8px rgba(6, 182, 212, 1));
-            }
-        }
-        .animate-hub-glow {
-            transform-origin: center;
-            animation: pulseGlow 3s ease-in-out infinite;
-        }
-
-        /* Respect reduced-motion preferences */
         @media (prefers-reduced-motion: reduce) {
-            .animate-flow-in,
-            .animate-flow-out,
-            .animate-hub-glow,
-            .animate-pulse {
-                animation: none !important;
-            }
-            html {
-                scroll-behavior: auto;
-            }
+            .animate-pulse { animation: none !important; }
+            html { scroll-behavior: auto; }
         }
     </style>
 </head>
-<body class="text-slate-800 antialiased selection:bg-indigo-600/20 selection:text-indigo-900">
-    <!-- Ambient Glassmorphism Background Blobs -->
-    <div class="fixed inset-0 -z-10 overflow-hidden pointer-events-none bg-slate-50">
-        <div class="absolute -top-[10%] -left-[10%] w-[50vw] h-[50vw] rounded-full bg-blue-200/40 blur-[100px] mix-blend-multiply"></div>
-        <div class="absolute top-[20%] -right-[10%] w-[40vw] h-[40vw] rounded-full bg-indigo-200/40 blur-[100px] mix-blend-multiply"></div>
-        <div class="absolute -bottom-[10%] left-[20%] w-[60vw] h-[60vw] rounded-full bg-cyan-100/50 blur-[120px] mix-blend-multiply"></div>
-    </div>
-
+<body class="text-slate-700 antialiased selection:bg-blue-500/20 selection:text-blue-700">
 
     <!-- Skip link for keyboard / screenreader users -->
-    <a href="#home" class="sr-only focus:not-sr-only focus:absolute focus:z-[60] focus:top-3 focus:left-3 focus:px-4 focus:py-2 focus:rounded focus:bg-indigo-600 focus:text-slate-950 focus:font-semibold">
+    <a href="#home" class="sr-only focus:not-sr-only focus:absolute focus:z-[60] focus:top-3 focus:left-3 focus:px-4 focus:py-2 focus:rounded-lg focus:bg-slate-900 focus:text-white focus:font-semibold">
         Zum Inhalt springen
     </a>
 
     <!-- Sticky Navigation -->
-    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-slate-200/60 backdrop-blur-md bg-white/60" id="nav-header">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <a href="#home" class="flex items-center gap-2 group" aria-label="Alexander Stubanus – Startseite">
-                <span class="w-8 h-8 rounded bg-gradient-to-br from-indigo-400 to-blue-600 flex items-center justify-center text-slate-900 font-bold text-lg shadow-[0_0_15px_rgba(99,102,241,0.3)] transition-transform group-hover:scale-105">
-                    <i class="fa-solid fa-code-merge text-xs" aria-hidden="true"></i>
-                </span>
-                <span class="font-mono-tech font-bold text-slate-900 tracking-wider text-sm">Alexander Stubanus</span>
+    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-white/40 bg-white/60 backdrop-blur-xl" id="nav-header">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#home" class="flex flex-col leading-tight group" aria-label="Alexander Stubanus – Startseite">
+                <span class="font-bold text-slate-900 tracking-tight text-base">Alexander Stubanus</span>
+                <span class="text-xs text-slate-500 font-medium">Data &amp; AI Engineer</span>
             </a>
 
             <!-- Desktop Links -->
-            <nav class="hidden lg:flex items-center gap-6 text-sm font-medium" aria-label="Hauptnavigation">
+            <nav class="hidden lg:flex items-center gap-7 text-sm font-medium" aria-label="Hauptnavigation">
                 <a href="#home" class="text-slate-500 hover:text-slate-900 transition-colors duration-200" id="link-home">Home</a>
-                <a href="#philosophie" class="text-slate-500 hover:text-slate-900 transition-colors duration-200" id="link-philosophie">Philosophie</a>
+                <a href="#philosophie" class="text-slate-500 hover:text-slate-900 transition-colors duration-200" id="link-philosophie">Profil</a>
                 <a href="#expertise" class="text-slate-500 hover:text-slate-900 transition-colors duration-200" id="link-expertise">Expertise</a>
                 <a href="#werdegang" class="text-slate-500 hover:text-slate-900 transition-colors duration-200" id="link-werdegang">Werdegang</a>
                 <a href="#projekte" class="text-slate-500 hover:text-slate-900 transition-colors duration-200" id="link-projekte">Projekte</a>
@@ -184,81 +139,85 @@
 
             <!-- CTA Navigation Button -->
             <div class="hidden lg:block">
-                <a href="#kontakt" class="px-4 py-2 rounded border border-indigo-500/30 text-indigo-600 hover:bg-indigo-600/10 hover:border-indigo-400 transition-all duration-200 text-xs font-mono-tech tracking-wider uppercase">
-                    Austausch initiieren
+                <a href="#kontakt" class="px-4 py-2 rounded-full bg-slate-900 text-white hover:bg-slate-700 transition-all duration-200 text-xs font-semibold tracking-wide">
+                    Kontakt aufnehmen
                 </a>
             </div>
 
             <!-- Mobile Menu Toggle Button -->
-            <button class="lg:hidden text-slate-500 hover:text-slate-900 focus:outline-none transition-colors" id="mobile-menu-btn" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-menu">
+            <button class="lg:hidden text-slate-600 hover:text-slate-900 focus:outline-none transition-colors" id="mobile-menu-btn" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-menu">
                 <i class="fa-solid fa-bars text-xl" id="mobile-menu-icon" aria-hidden="true"></i>
             </button>
         </div>
 
         <!-- Mobile Drawer -->
-        <div class="hidden lg:hidden border-t border-slate-200/60 bg-white/80 px-6 py-6 space-y-4 shadow-xl" id="mobile-menu">
+        <div class="hidden lg:hidden border-t border-white/50 bg-white/85 backdrop-blur-xl px-6 py-6 space-y-4 shadow-lg" id="mobile-menu">
             <nav class="flex flex-col gap-4 text-base font-medium" aria-label="Mobile Navigation">
-                <a href="#home" class="text-slate-500 hover:text-slate-900 transition-colors py-1" onclick="toggleMobileMenu()">Home</a>
-                <a href="#philosophie" class="text-slate-500 hover:text-slate-900 transition-colors py-1" onclick="toggleMobileMenu()">Philosophie</a>
-                <a href="#expertise" class="text-slate-500 hover:text-slate-900 transition-colors py-1" onclick="toggleMobileMenu()">Expertise</a>
-                <a href="#werdegang" class="text-slate-500 hover:text-slate-900 transition-colors py-1" onclick="toggleMobileMenu()">Werdegang</a>
-                <a href="#projekte" class="text-slate-500 hover:text-slate-900 transition-colors py-1" onclick="toggleMobileMenu()">Projekte</a>
-                <a href="#kontakt" class="text-slate-500 hover:text-slate-900 transition-colors py-1" onclick="toggleMobileMenu()">Kontakt</a>
+                <a href="#home" class="text-slate-600 hover:text-slate-900 transition-colors py-1" onclick="toggleMobileMenu()">Home</a>
+                <a href="#philosophie" class="text-slate-600 hover:text-slate-900 transition-colors py-1" onclick="toggleMobileMenu()">Profil</a>
+                <a href="#expertise" class="text-slate-600 hover:text-slate-900 transition-colors py-1" onclick="toggleMobileMenu()">Expertise</a>
+                <a href="#werdegang" class="text-slate-600 hover:text-slate-900 transition-colors py-1" onclick="toggleMobileMenu()">Werdegang</a>
+                <a href="#projekte" class="text-slate-600 hover:text-slate-900 transition-colors py-1" onclick="toggleMobileMenu()">Projekte</a>
+                <a href="#kontakt" class="text-slate-600 hover:text-slate-900 transition-colors py-1" onclick="toggleMobileMenu()">Kontakt</a>
             </nav>
-            <div class="pt-4 border-t border-slate-200/60">
-                <a href="#kontakt" class="block text-center w-full px-4 py-3 rounded bg-indigo-50/80 border border-indigo-500/30 text-indigo-600 font-mono-tech tracking-wider uppercase text-xs hover:bg-indigo-600/20 transition-all" onclick="toggleMobileMenu()">
-                    Austausch initiieren
+            <div class="pt-4 border-t border-slate-200">
+                <a href="#kontakt" class="block text-center w-full px-4 py-3 rounded-full bg-slate-900 text-white font-semibold text-sm hover:bg-slate-700 transition-all" onclick="toggleMobileMenu()">
+                    Kontakt aufnehmen
                 </a>
             </div>
         </div>
     </header>
 
-    <main class="tech-grid min-h-screen pt-20">
+    <main class="max-w-6xl mx-auto px-6 pt-28 pb-16 space-y-10">
 
         <!-- Hero Section -->
-        <section id="home" class="relative max-w-7xl mx-auto px-6 py-16 md:py-32 flex flex-col-reverse lg:flex-row items-center justify-between gap-12 border-b border-slate-200/60 scroll-mt-20">
-            <div class="flex-1 max-w-2xl text-left space-y-6">
-                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-indigo-50/50 border border-indigo-500/20 text-indigo-600 text-xs font-mono-tech tracking-wider uppercase">
-                    <span class="w-1.5 h-1.5 rounded-full bg-indigo-500 animate-pulse" aria-hidden="true"></span>
-                    Engineer &middot; Data &middot; AI &middot; RPA
-                </div>
-
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight tracking-tight">
-                    Datenarchitekturen &amp; intelligente Automatisierung
-                </h1>
-
-                <p class="text-lg md:text-xl text-slate-500 leading-relaxed font-light">
-                    Ich überführe verteilte, heterogene Datenlandschaften in wartbare Hub-and-Spoke-Architekturen, robuste ETL-Pipelines und KI-gestützte Workflows – mit Fokus auf Skalierbarkeit, Datenqualität und Nachvollziehbarkeit.
-                </p>
-
-                <div class="flex flex-wrap items-center gap-4 pt-4">
-                    <a href="#expertise" class="px-6 py-3.5 rounded bg-indigo-600 hover:bg-indigo-500 text-slate-950 font-semibold text-sm transition-all duration-200 flex items-center gap-2 group shadow-[0_0_20px_rgba(99,102,241,0.2)]">
-                        Expertise ansehen
-                        <i class="fa-solid fa-arrow-right text-xs transition-transform group-hover:translate-x-1" aria-hidden="true"></i>
-                    </a>
-                    <a href="#projekte" class="px-6 py-3.5 rounded border border-slate-700 hover:border-slate-500 text-slate-900 font-medium text-sm transition-all duration-200">
-                        Projekte
-                    </a>
-                </div>
-            </div>
-
-            <!-- Hero Graphic: Modern Glassmorphism Abstract Representation -->
-            <div class="flex-1 w-full max-w-md lg:max-w-xl flex justify-center relative">
-                <!-- Abstract Stacked Cards -->
-                <div class="relative w-full aspect-square max-w-[420px] flex items-center justify-center">
-                    <!-- Background Card -->
-                    <div class="absolute inset-8 bg-indigo-100 rounded-3xl transform rotate-6 opacity-50"></div>
-                    <!-- Middle Card -->
-                    <div class="absolute inset-8 bg-white/40 backdrop-blur-sm border border-white/60 rounded-3xl transform -rotate-3 shadow-lg"></div>
-                    <!-- Front Card -->
-                    <div class="absolute inset-8 bg-white/70 backdrop-blur-md border border-white/80 rounded-3xl shadow-xl flex flex-col items-center justify-center p-8 space-y-8">
-                        <div class="w-16 h-16 rounded-2xl bg-indigo-50 flex items-center justify-center shadow-inner">
-                            <i class="fa-solid fa-layer-group text-2xl text-indigo-500" aria-hidden="true"></i>
+        <section id="home" class="scroll-mt-28">
+            <div class="glass rounded-[2rem] p-8 md:p-12">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 items-center">
+                    <div class="lg:col-span-2 space-y-6">
+                        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/70 border border-white/80 text-blue-600 text-xs font-semibold tracking-wide">
+                            <span class="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse" aria-hidden="true"></span>
+                            Data &middot; AI &middot; RPA Engineer
                         </div>
-                        <div class="space-y-4 text-center w-full max-w-[200px]">
-                            <div class="h-2.5 w-1/3 bg-slate-200 rounded mx-auto"></div>
-                            <div class="h-2.5 w-full bg-slate-200 rounded mx-auto"></div>
-                            <div class="h-2.5 w-2/3 bg-slate-200 rounded mx-auto"></div>
+
+                        <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 leading-[1.1] tracking-tight">
+                            Datenarchitekturen &amp; intelligente Automatisierung
+                        </h1>
+
+                        <p class="text-base md:text-lg text-slate-600 leading-relaxed max-w-xl">
+                            Hi, ich bin Alexander – Data-, AI- und RPA-Engineer. Ich überführe verteilte, heterogene Datenlandschaften in wartbare Hub-and-Spoke-Architekturen, robuste ETL-Pipelines und KI-gestützte Workflows.
+                        </p>
+
+                        <div class="flex flex-wrap items-center gap-3 pt-2">
+                            <a href="#projekte" class="px-6 py-3 rounded-full bg-slate-900 hover:bg-slate-700 text-white font-semibold text-sm transition-all duration-200 flex items-center gap-2 group">
+                                Projekte ansehen
+                                <i class="fa-solid fa-arrow-right text-xs transition-transform group-hover:translate-x-1" aria-hidden="true"></i>
+                            </a>
+                            <a href="#expertise" class="px-6 py-3 rounded-full bg-white/70 border border-slate-200 hover:border-slate-300 text-slate-700 font-medium text-sm transition-all duration-200">
+                                Expertise
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Portrait + Social -->
+                    <div class="flex flex-col items-center lg:items-end gap-5">
+                        <div class="w-44 h-44 md:w-48 md:h-48 rounded-3xl overflow-hidden glass-soft p-1.5 shadow-lg">
+                            <img src="portrait.png" alt="Porträt von Alexander Stubanus" width="431" height="427" class="w-full h-full object-cover rounded-[1.3rem]" />
+                        </div>
+                        <!-- TODO: LinkedIn- und GitHub-URL eintragen (href="#" ersetzen). -->
+                        <div class="flex items-center gap-3">
+                            <a href="#" aria-label="LinkedIn-Profil" class="w-10 h-10 rounded-full glass-soft flex items-center justify-center text-slate-600 hover:text-blue-600 hover:-translate-y-0.5 transition-all">
+                                <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+                            </a>
+                            <a href="#" aria-label="GitHub-Profil" class="w-10 h-10 rounded-full glass-soft flex items-center justify-center text-slate-600 hover:text-blue-600 hover:-translate-y-0.5 transition-all">
+                                <i class="fa-brands fa-github" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://nutrition-fit.com" target="_blank" rel="noopener noreferrer" aria-label="Projekt nutrition-fit.com" class="w-10 h-10 rounded-full glass-soft flex items-center justify-center text-slate-600 hover:text-blue-600 hover:-translate-y-0.5 transition-all">
+                                <i class="fa-solid fa-globe" aria-hidden="true"></i>
+                            </a>
+                            <a href="mailto:stubanus@googlemail.com" aria-label="E-Mail schreiben" class="w-10 h-10 rounded-full glass-soft flex items-center justify-center text-slate-600 hover:text-blue-600 hover:-translate-y-0.5 transition-all">
+                                <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -266,240 +225,214 @@
         </section>
 
         <!-- Profil & Philosophie Section -->
-        <section id="philosophie" class="max-w-7xl mx-auto px-6 py-20 md:py-32 border-b border-slate-200/60 scroll-mt-20">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-
-                <!-- Section Header Left side -->
-                <div class="lg:col-span-4 space-y-4">
-                    <span class="font-mono-tech text-xs tracking-widest text-indigo-600 uppercase font-semibold">Profil &amp; Philosophie</span>
-                    <h2 class="text-3xl font-bold text-slate-900 tracking-tight leading-tight">
-                        Architektur trifft Implementierungs-Exzellenz.
-                    </h2>
+        <section id="philosophie" class="scroll-mt-28">
+            <div class="glass rounded-[2rem] p-8 md:p-12 space-y-8">
+                <div class="space-y-3 max-w-2xl">
+                    <span class="font-mono-tech text-xs tracking-widest text-blue-600 uppercase font-semibold">Profil &amp; Philosophie</span>
+                    <h2 class="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight">Architektur trifft Implementierungs-Exzellenz.</h2>
                 </div>
 
-                <!-- Text Right side -->
-                <div class="lg:col-span-8 space-y-8 text-slate-500 font-light text-base md:text-lg leading-relaxed">
+                <div class="space-y-6 text-slate-600 leading-relaxed max-w-3xl">
                     <p>
                         Technologie ist kein Selbstzweck – sie dient der Reduktion von Komplexität. Eine Dateninfrastruktur ist nur so wertvoll wie ihre Wartbarkeit und die Robustheit ihrer Schnittstellen. Ich unterstütze Unternehmen dabei, isolierte Dateninseln aufzulösen und skalierbare Architekturen nach bewährten Designmustern aufzubauen.
                     </p>
-                    <blockquote class="border-l-2 border-indigo-500/40 pl-6 text-slate-700 italic font-normal">
+                    <blockquote class="border-l-2 border-blue-500/50 pl-6 text-slate-700 italic">
                         „Fünf Jahre fokussierte Erfahrung im Datenumfeld, davon zwei Jahre als Vollzeit-Professional – ein gezielter technologischer Deep-Dive statt Breite ohne Tiefe. Mein Schwerpunkt liegt auf stabilen Hub-and-Spoke-Datenarchitekturen und resilienten Pipelines, die ohne ständige manuelle Eingriffe laufen.“
                     </blockquote>
+                </div>
 
-                    <!-- Stats Grid -->
-                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-6 text-left">
-                        <div class="p-4 rounded border border-slate-200/60 bg-white/40 backdrop-blur-xl shadow-[0_8px_32px_rgba(31,38,135,0.05)] border border-white/60">
-                            <div class="text-3xl font-extrabold text-slate-900 font-mono-tech">5<span class="text-indigo-600">J.</span></div>
-                            <div class="text-xs text-slate-500 uppercase tracking-wider font-mono-tech mt-1">Fokus Data, AI &amp; RPA</div>
-                        </div>
-                        <div class="p-4 rounded border border-slate-200/60 bg-white/40 backdrop-blur-xl shadow-[0_8px_32px_rgba(31,38,135,0.05)] border border-white/60">
-                            <div class="text-3xl font-extrabold text-slate-900 font-mono-tech">2<span class="text-indigo-600">J.</span></div>
-                            <div class="text-xs text-slate-500 uppercase tracking-wider font-mono-tech mt-1">Vollzeit-Professional</div>
-                        </div>
-                        <div class="p-4 rounded border border-slate-200/60 bg-white/40 backdrop-blur-xl shadow-[0_8px_32px_rgba(31,38,135,0.05)] border border-white/60">
-                            <div class="text-3xl font-extrabold text-slate-900 font-mono-tech">4</div>
-                            <div class="text-xs text-slate-500 uppercase tracking-wider font-mono-tech mt-1">Kernkompetenz-Felder</div>
-                        </div>
+                <!-- Stats Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    <div class="glass-soft rounded-2xl p-5">
+                        <div class="text-3xl font-extrabold text-slate-900">5<span class="text-blue-600">J.</span></div>
+                        <div class="text-xs text-slate-500 uppercase tracking-wider font-semibold mt-1">Fokus Data, AI &amp; RPA</div>
+                    </div>
+                    <div class="glass-soft rounded-2xl p-5">
+                        <div class="text-3xl font-extrabold text-slate-900">2<span class="text-blue-600">J.</span></div>
+                        <div class="text-xs text-slate-500 uppercase tracking-wider font-semibold mt-1">Vollzeit-Professional</div>
+                    </div>
+                    <div class="glass-soft rounded-2xl p-5">
+                        <div class="text-3xl font-extrabold text-slate-900">4</div>
+                        <div class="text-xs text-slate-500 uppercase tracking-wider font-semibold mt-1">Kernkompetenz-Felder</div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Expertise Section -->
-        <section id="expertise" class="max-w-7xl mx-auto px-6 py-20 md:py-32 border-b border-slate-200/60 scroll-mt-20">
-            <div class="space-y-16">
-                <!-- Section Header -->
-                <div class="max-w-3xl space-y-4">
-                    <span class="font-mono-tech text-xs tracking-widest text-indigo-600 uppercase font-semibold">Kernkompetenzen</span>
-                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight">Expertise in System- und Datenintegration</h2>
-                    <p class="text-slate-500 font-light text-base md:text-lg">
-                        Technologiefokus und Architekturmuster für anspruchsvolle Systemlandschaften.
+        <section id="expertise" class="scroll-mt-28 space-y-6">
+            <div class="max-w-2xl space-y-3 px-2">
+                <span class="font-mono-tech text-xs tracking-widest text-blue-600 uppercase font-semibold">Kernkompetenzen</span>
+                <h2 class="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight">Expertise in System- und Datenintegration</h2>
+                <p class="text-slate-600">Technologiefokus und Architekturmuster für anspruchsvolle Systemlandschaften.</p>
+            </div>
+
+            <!-- Grid Layout (4 cards) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                <!-- Card 1 -->
+                <div class="group glass rounded-[1.75rem] p-7 space-y-5 hover:-translate-y-1 transition-all duration-300">
+                    <div class="flex items-center justify-between">
+                        <div class="w-12 h-12 rounded-2xl bg-blue-50 border border-blue-100 flex items-center justify-center text-blue-600 text-lg">
+                            <i class="fa-solid fa-network-wired" aria-hidden="true"></i>
+                        </div>
+                        <span class="text-xs font-mono-tech text-slate-400 font-semibold">01 / ARCHITECTURE</span>
+                    </div>
+                    <div class="space-y-1">
+                        <h3 class="text-lg font-bold text-slate-900">Data Architecture &amp; Integration</h3>
+                        <p class="text-xs font-mono-tech text-slate-500">Hub-and-Spoke &amp; ETL/ELT</p>
+                    </div>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        Aufbau zentraler Datendrehscheiben zur Entkopplung heterogener Quellsysteme. Entwicklung von Schnittstellen- und ETL-Prozessen inkl. Mapping, Authentifizierung und Protokollierung – mit Fokus auf Skalierbarkeit, Datenqualität und Traceability.
                     </p>
+                    <div class="flex flex-wrap gap-2 pt-4 border-t border-slate-200/70">
+                        <span class="px-2.5 py-1 rounded-full bg-white/70 border border-slate-200 text-xs font-medium text-slate-600">Python</span>
+                        <span class="px-2.5 py-1 rounded-full bg-white/70 border border-slate-200 text-xs font-medium text-slate-600">SQL</span>
+                        <span class="px-2.5 py-1 rounded-full bg-white/70 border border-slate-200 text-xs font-medium text-slate-600">REST APIs</span>
+                        <span class="px-2.5 py-1 rounded-full bg-white/70 border border-slate-200 text-xs font-medium text-slate-600">Power Automate</span>
+                        <span class="px-2.5 py-1 rounded-full bg-white/70 border border-slate-200 text-xs font-medium text-slate-600">Microsoft Azure</span>
+                    </div>
                 </div>
 
-                <!-- Grid Layout (4 cards) -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-
-                    <!-- Card 1: Data Architecture & Integration -->
-                    <div class="group relative rounded-xl border border-slate-200/60 bg-white/40 backdrop-blur-xl shadow-[0_8px_32px_rgba(31,38,135,0.05)] border border-white/60 p-8 space-y-6 hover:border-indigo-500/30 hover:shadow-[0_0_30px_rgba(99,102,241,0.08)] transition-all duration-300">
-                        <div class="flex items-center justify-between">
-                            <div class="w-12 h-12 rounded bg-indigo-50/80 border border-indigo-500/20 flex items-center justify-center text-indigo-600 text-lg shadow-[0_0_10px_rgba(99,102,241,0.1)] group-hover:scale-105 transition-transform">
-                                <i class="fa-solid fa-network-wired" aria-hidden="true"></i>
-                            </div>
-                            <span class="text-xs font-mono-tech text-slate-500 font-semibold">01 / ARCHITECTURE</span>
+                <!-- Card 2 -->
+                <div class="group glass rounded-[1.75rem] p-7 space-y-5 hover:-translate-y-1 transition-all duration-300">
+                    <div class="flex items-center justify-between">
+                        <div class="w-12 h-12 rounded-2xl bg-blue-50 border border-blue-100 flex items-center justify-center text-blue-600 text-lg">
+                            <i class="fa-solid fa-server" aria-hidden="true"></i>
                         </div>
-                        <div class="space-y-2">
-                            <h3 class="text-xl font-bold text-slate-900 group-hover:text-indigo-600 transition-colors">
-                                Data Architecture &amp; Integration
-                            </h3>
-                            <p class="text-xs font-mono-tech text-slate-500">Kernbereich: Hub-and-Spoke &amp; ETL/ELT</p>
-                        </div>
-                        <p class="text-sm text-slate-500 leading-relaxed font-light">
-                            Aufbau zentraler Datendrehscheiben zur Entkopplung heterogener Quellsysteme. Entwicklung von Schnittstellen- und ETL-Prozessen inkl. Mapping, Authentifizierung und Protokollierung – mit Fokus auf Skalierbarkeit, Datenqualität und Traceability.
-                        </p>
-                        <!-- Tech stack tag cloud -->
-                        <div class="flex flex-wrap gap-2 pt-4 border-t border-slate-200/60">
-                            <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">Python</span>
-                            <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">SQL</span>
-                            <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">REST APIs</span>
-                            <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">Power Automate</span>
-                            <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">Microsoft Azure</span>
-                        </div>
+                        <span class="text-xs font-mono-tech text-slate-400 font-semibold">02 / ENGINEERING</span>
                     </div>
-
-                    <!-- Card 2: Data Engineering & Analytics -->
-                    <div class="group relative rounded-xl border border-slate-200/60 bg-white/40 backdrop-blur-xl shadow-[0_8px_32px_rgba(31,38,135,0.05)] border border-white/60 p-8 space-y-6 hover:border-indigo-500/30 hover:shadow-[0_0_30px_rgba(99,102,241,0.08)] transition-all duration-300">
-                        <div class="flex items-center justify-between">
-                            <div class="w-12 h-12 rounded bg-indigo-50/80 border border-indigo-500/20 flex items-center justify-center text-indigo-600 text-lg shadow-[0_0_10px_rgba(99,102,241,0.1)] group-hover:scale-105 transition-transform">
-                                <i class="fa-solid fa-server" aria-hidden="true"></i>
-                            </div>
-                            <span class="text-xs font-mono-tech text-slate-500 font-semibold">02 / ENGINEERING</span>
-                        </div>
-                        <div class="space-y-2">
-                            <h3 class="text-xl font-bold text-slate-900 group-hover:text-indigo-600 transition-colors">
-                                Data Engineering &amp; Business Intelligence
-                            </h3>
-                            <p class="text-xs font-mono-tech text-slate-500">Kernbereich: Datenmodelle &amp; Reporting</p>
-                        </div>
-                        <p class="text-sm text-slate-500 leading-relaxed font-light">
-                            Aufbau und Weiterentwicklung von Datenmodellen sowie interaktiven Reports inkl. Kennzahlen- und Steuerungslogik. Verlässliche Bereitstellung betriebswirtschaftlicher KPIs für datengetriebene Entscheidungen.
-                        </p>
-                        <!-- Tech stack tag cloud -->
-                        <div class="flex flex-wrap gap-2 pt-4 border-t border-slate-200/60">
-                            <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">Power BI</span>
-                            <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">Microsoft Fabric</span>
-                            <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">SQL</span>
-                            <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">Python</span>
-                            <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">R</span>
-                            <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">Microsoft Azure</span>
-                        </div>
+                    <div class="space-y-1">
+                        <h3 class="text-lg font-bold text-slate-900">Data Engineering &amp; Business Intelligence</h3>
+                        <p class="text-xs font-mono-tech text-slate-500">Datenmodelle &amp; Reporting</p>
                     </div>
-
-                    <!-- Card 3: AI & Data Science -->
-                    <div class="group relative rounded-xl border border-slate-200/60 bg-white/40 backdrop-blur-xl shadow-[0_8px_32px_rgba(31,38,135,0.05)] border border-white/60 p-8 space-y-6 hover:border-indigo-500/30 hover:shadow-[0_0_30px_rgba(99,102,241,0.08)] transition-all duration-300">
-                        <div class="flex items-center justify-between">
-                            <div class="w-12 h-12 rounded bg-indigo-50/80 border border-indigo-500/20 flex items-center justify-center text-indigo-600 text-lg shadow-[0_0_10px_rgba(99,102,241,0.1)] group-hover:scale-105 transition-transform">
-                                <i class="fa-solid fa-brain" aria-hidden="true"></i>
-                            </div>
-                            <span class="text-xs font-mono-tech text-slate-500 font-semibold">03 / AI &amp; SCIENCE</span>
-                        </div>
-                        <div class="space-y-2">
-                            <h3 class="text-xl font-bold text-slate-900 group-hover:text-indigo-600 transition-colors">
-                                AI &amp; Data Science
-                            </h3>
-                            <p class="text-xs font-mono-tech text-slate-500">Kernbereich: Forecasting, Predictive ML &amp; LLM</p>
-                        </div>
-                        <p class="text-sm text-slate-500 leading-relaxed font-light">
-                            Entwicklung statistischer Modelle und Prädiktionsalgorithmen mit Praxisbezug – von klassischen Zeitreihen bis zu Gradient-Boosting- und neuronalen Verfahren. Integration LLM-gestützter Systeme in bestehende Anwendungen.
-                        </p>
-                        <!-- Tech stack tag cloud -->
-                        <div class="flex flex-wrap gap-2 pt-4 border-t border-slate-200/60">
-                            <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">XGBoost</span>
-                            <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">CatBoost</span>
-                            <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">Prophet</span>
-                            <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">LSTM</span>
-                            <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">LLM-Integration</span>
-                        </div>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        Aufbau und Weiterentwicklung von Datenmodellen sowie interaktiven Reports inkl. Kennzahlen- und Steuerungslogik. Verlässliche Bereitstellung betriebswirtschaftlicher KPIs für datengetriebene Entscheidungen.
+                    </p>
+                    <div class="flex flex-wrap gap-2 pt-4 border-t border-slate-200/70">
+                        <span class="px-2.5 py-1 rounded-full bg-white/70 border border-slate-200 text-xs font-medium text-slate-600">Power BI</span>
+                        <span class="px-2.5 py-1 rounded-full bg-white/70 border border-slate-200 text-xs font-medium text-slate-600">Microsoft Fabric</span>
+                        <span class="px-2.5 py-1 rounded-full bg-white/70 border border-slate-200 text-xs font-medium text-slate-600">SQL</span>
+                        <span class="px-2.5 py-1 rounded-full bg-white/70 border border-slate-200 text-xs font-medium text-slate-600">Python</span>
+                        <span class="px-2.5 py-1 rounded-full bg-white/70 border border-slate-200 text-xs font-medium text-slate-600">R</span>
+                        <span class="px-2.5 py-1 rounded-full bg-white/70 border border-slate-200 text-xs font-medium text-slate-600">Microsoft Azure</span>
                     </div>
-
-                    <!-- Card 4: RPA (Robotic Process Automation) -->
-                    <div class="group relative rounded-xl border border-slate-200/60 bg-white/40 backdrop-blur-xl shadow-[0_8px_32px_rgba(31,38,135,0.05)] border border-white/60 p-8 space-y-6 hover:border-indigo-500/30 hover:shadow-[0_0_30px_rgba(99,102,241,0.08)] transition-all duration-300">
-                        <div class="flex items-center justify-between">
-                            <div class="w-12 h-12 rounded bg-indigo-50/80 border border-indigo-500/20 flex items-center justify-center text-indigo-600 text-lg shadow-[0_0_10px_rgba(99,102,241,0.1)] group-hover:scale-105 transition-transform">
-                                <i class="fa-solid fa-robot" aria-hidden="true"></i>
-                            </div>
-                            <span class="text-xs font-mono-tech text-slate-500 font-semibold">04 / AUTOMATION</span>
-                        </div>
-                        <div class="space-y-2">
-                            <h3 class="text-xl font-bold text-slate-900 group-hover:text-indigo-600 transition-colors">
-                                RPA (Robotic Process Automation)
-                            </h3>
-                            <p class="text-xs font-mono-tech text-slate-500">Kernbereich: Intelligente Workflows (IPA)</p>
-                        </div>
-                        <p class="text-sm text-slate-500 leading-relaxed font-light">
-                            Automatisierung fragmentierter Geschäftsprozesse über RPA- und Bot-Skripte. Entwicklung robuster Software-Roboter zur Überbrückung fehlender API-Schnittstellen – bei Bedarf kombiniert mit KI-gestützten Entscheidungshilfen (Intelligent Process Automation).
-                        </p>
-                        <!-- Tech stack tag cloud -->
-                        <div class="flex flex-wrap gap-2 pt-4 border-t border-slate-200/60">
-                            <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">Power Automate</span>
-                            <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">RPA / Bot-Skripte</span>
-                            <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">Python</span>
-                            <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">REST APIs</span>
-                            <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">VBA</span>
-                        </div>
-                    </div>
-
                 </div>
 
-                <!-- Technologie-Stack -->
-                <div class="space-y-8 pt-4">
-                    <div class="max-w-3xl space-y-2">
-                        <h3 class="text-xl md:text-2xl font-bold text-slate-900 tracking-tight">Technologie-Stack</h3>
-                        <p class="text-slate-500 font-light text-sm md:text-base">Eingesetzte Sprachen, Plattformen und Verfahren im Überblick.</p>
+                <!-- Card 3 -->
+                <div class="group glass rounded-[1.75rem] p-7 space-y-5 hover:-translate-y-1 transition-all duration-300">
+                    <div class="flex items-center justify-between">
+                        <div class="w-12 h-12 rounded-2xl bg-blue-50 border border-blue-100 flex items-center justify-center text-blue-600 text-lg">
+                            <i class="fa-solid fa-brain" aria-hidden="true"></i>
+                        </div>
+                        <span class="text-xs font-mono-tech text-slate-400 font-semibold">03 / AI &amp; SCIENCE</span>
+                    </div>
+                    <div class="space-y-1">
+                        <h3 class="text-lg font-bold text-slate-900">AI &amp; Data Science</h3>
+                        <p class="text-xs font-mono-tech text-slate-500">Forecasting, Predictive ML &amp; LLM</p>
+                    </div>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        Entwicklung statistischer Modelle und Prädiktionsalgorithmen mit Praxisbezug – von klassischen Zeitreihen bis zu Gradient-Boosting- und neuronalen Verfahren. Integration LLM-gestützter Systeme in bestehende Anwendungen.
+                    </p>
+                    <div class="flex flex-wrap gap-2 pt-4 border-t border-slate-200/70">
+                        <span class="px-2.5 py-1 rounded-full bg-white/70 border border-slate-200 text-xs font-medium text-slate-600">XGBoost</span>
+                        <span class="px-2.5 py-1 rounded-full bg-white/70 border border-slate-200 text-xs font-medium text-slate-600">CatBoost</span>
+                        <span class="px-2.5 py-1 rounded-full bg-white/70 border border-slate-200 text-xs font-medium text-slate-600">Prophet</span>
+                        <span class="px-2.5 py-1 rounded-full bg-white/70 border border-slate-200 text-xs font-medium text-slate-600">LSTM</span>
+                        <span class="px-2.5 py-1 rounded-full bg-white/70 border border-slate-200 text-xs font-medium text-slate-600">LLM-Integration</span>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="group glass rounded-[1.75rem] p-7 space-y-5 hover:-translate-y-1 transition-all duration-300">
+                    <div class="flex items-center justify-between">
+                        <div class="w-12 h-12 rounded-2xl bg-blue-50 border border-blue-100 flex items-center justify-center text-blue-600 text-lg">
+                            <i class="fa-solid fa-robot" aria-hidden="true"></i>
+                        </div>
+                        <span class="text-xs font-mono-tech text-slate-400 font-semibold">04 / AUTOMATION</span>
+                    </div>
+                    <div class="space-y-1">
+                        <h3 class="text-lg font-bold text-slate-900">RPA (Robotic Process Automation)</h3>
+                        <p class="text-xs font-mono-tech text-slate-500">Intelligente Workflows (IPA)</p>
+                    </div>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        Automatisierung fragmentierter Geschäftsprozesse über RPA- und Bot-Skripte. Entwicklung robuster Software-Roboter zur Überbrückung fehlender API-Schnittstellen – bei Bedarf kombiniert mit KI-gestützten Entscheidungshilfen (Intelligent Process Automation).
+                    </p>
+                    <div class="flex flex-wrap gap-2 pt-4 border-t border-slate-200/70">
+                        <span class="px-2.5 py-1 rounded-full bg-white/70 border border-slate-200 text-xs font-medium text-slate-600">Power Automate</span>
+                        <span class="px-2.5 py-1 rounded-full bg-white/70 border border-slate-200 text-xs font-medium text-slate-600">RPA / Bot-Skripte</span>
+                        <span class="px-2.5 py-1 rounded-full bg-white/70 border border-slate-200 text-xs font-medium text-slate-600">Python</span>
+                        <span class="px-2.5 py-1 rounded-full bg-white/70 border border-slate-200 text-xs font-medium text-slate-600">REST APIs</span>
+                        <span class="px-2.5 py-1 rounded-full bg-white/70 border border-slate-200 text-xs font-medium text-slate-600">VBA</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Technologie-Stack -->
+            <div class="glass rounded-[2rem] p-8 md:p-10 space-y-6 mt-2">
+                <div class="max-w-2xl space-y-2">
+                    <h3 class="text-xl font-bold text-slate-900 tracking-tight">Technologie-Stack</h3>
+                    <p class="text-slate-600 text-sm">Eingesetzte Sprachen, Plattformen und Verfahren im Überblick.</p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                    <div class="glass-soft rounded-2xl p-5 space-y-3">
+                        <div class="flex items-center gap-2.5">
+                            <i class="fa-solid fa-code text-blue-600 text-sm" aria-hidden="true"></i>
+                            <span class="text-xs font-mono-tech text-slate-500 uppercase tracking-wider font-semibold">Sprachen &amp; Datenbanken</span>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2.5 py-1 rounded-full bg-white/70 border border-slate-200 text-xs font-medium text-slate-600">Python</span>
+                            <span class="px-2.5 py-1 rounded-full bg-white/70 border border-slate-200 text-xs font-medium text-slate-600">SQL</span>
+                            <span class="px-2.5 py-1 rounded-full bg-white/70 border border-slate-200 text-xs font-medium text-slate-600">R</span>
+                            <span class="px-2.5 py-1 rounded-full bg-white/70 border border-slate-200 text-xs font-medium text-slate-600">VBA</span>
+                            <span class="px-2.5 py-1 rounded-full bg-white/70 border border-slate-200 text-xs font-medium text-slate-600">Git</span>
+                        </div>
                     </div>
 
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                        <!-- Sprachen & Datenbanken -->
-                        <div class="rounded-xl border border-slate-200/60 bg-white/40 backdrop-blur-xl shadow-[0_8px_32px_rgba(31,38,135,0.05)] border border-white/60 p-6 space-y-4">
-                            <div class="flex items-center gap-3">
-                                <i class="fa-solid fa-code text-indigo-600 text-sm" aria-hidden="true"></i>
-                                <span class="text-xs font-mono-tech text-slate-500 uppercase tracking-wider font-semibold">Sprachen &amp; Datenbanken</span>
-                            </div>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">Python</span>
-                                <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">SQL</span>
-                                <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">R</span>
-                                <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">VBA</span>
-                                <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">Git</span>
-                            </div>
+                    <div class="glass-soft rounded-2xl p-5 space-y-3">
+                        <div class="flex items-center gap-2.5">
+                            <i class="fa-solid fa-cloud text-blue-600 text-sm" aria-hidden="true"></i>
+                            <span class="text-xs font-mono-tech text-slate-500 uppercase tracking-wider font-semibold">Microsoft &amp; Cloud</span>
                         </div>
-
-                        <!-- Microsoft & Cloud -->
-                        <div class="rounded-xl border border-slate-200/60 bg-white/40 backdrop-blur-xl shadow-[0_8px_32px_rgba(31,38,135,0.05)] border border-white/60 p-6 space-y-4">
-                            <div class="flex items-center gap-3">
-                                <i class="fa-solid fa-cloud text-indigo-600 text-sm" aria-hidden="true"></i>
-                                <span class="text-xs font-mono-tech text-slate-500 uppercase tracking-wider font-semibold">Microsoft &amp; Cloud</span>
-                            </div>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">Microsoft Azure</span>
-                                <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">Microsoft Fabric</span>
-                                <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">Power BI</span>
-                                <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">Power Apps</span>
-                                <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">Power Automate</span>
-                                <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">MS Office</span>
-                            </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2.5 py-1 rounded-full bg-white/70 border border-slate-200 text-xs font-medium text-slate-600">Microsoft Azure</span>
+                            <span class="px-2.5 py-1 rounded-full bg-white/70 border border-slate-200 text-xs font-medium text-slate-600">Microsoft Fabric</span>
+                            <span class="px-2.5 py-1 rounded-full bg-white/70 border border-slate-200 text-xs font-medium text-slate-600">Power BI</span>
+                            <span class="px-2.5 py-1 rounded-full bg-white/70 border border-slate-200 text-xs font-medium text-slate-600">Power Apps</span>
+                            <span class="px-2.5 py-1 rounded-full bg-white/70 border border-slate-200 text-xs font-medium text-slate-600">Power Automate</span>
+                            <span class="px-2.5 py-1 rounded-full bg-white/70 border border-slate-200 text-xs font-medium text-slate-600">MS Office</span>
                         </div>
+                    </div>
 
-                        <!-- Machine Learning & Forecasting -->
-                        <div class="rounded-xl border border-slate-200/60 bg-white/40 backdrop-blur-xl shadow-[0_8px_32px_rgba(31,38,135,0.05)] border border-white/60 p-6 space-y-4">
-                            <div class="flex items-center gap-3">
-                                <i class="fa-solid fa-chart-line text-indigo-600 text-sm" aria-hidden="true"></i>
-                                <span class="text-xs font-mono-tech text-slate-500 uppercase tracking-wider font-semibold">Machine Learning &amp; Forecasting</span>
-                            </div>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">XGBoost</span>
-                                <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">CatBoost</span>
-                                <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">Random Forest</span>
-                                <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">KNN</span>
-                                <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">Prophet</span>
-                                <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">ARIMA</span>
-                                <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">LSTM</span>
-                                <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">TFT</span>
-                                <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">NEAT</span>
-                            </div>
+                    <div class="glass-soft rounded-2xl p-5 space-y-3">
+                        <div class="flex items-center gap-2.5">
+                            <i class="fa-solid fa-chart-line text-blue-600 text-sm" aria-hidden="true"></i>
+                            <span class="text-xs font-mono-tech text-slate-500 uppercase tracking-wider font-semibold">Machine Learning &amp; Forecasting</span>
                         </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2.5 py-1 rounded-full bg-white/70 border border-slate-200 text-xs font-medium text-slate-600">XGBoost</span>
+                            <span class="px-2.5 py-1 rounded-full bg-white/70 border border-slate-200 text-xs font-medium text-slate-600">CatBoost</span>
+                            <span class="px-2.5 py-1 rounded-full bg-white/70 border border-slate-200 text-xs font-medium text-slate-600">Random Forest</span>
+                            <span class="px-2.5 py-1 rounded-full bg-white/70 border border-slate-200 text-xs font-medium text-slate-600">KNN</span>
+                            <span class="px-2.5 py-1 rounded-full bg-white/70 border border-slate-200 text-xs font-medium text-slate-600">Prophet</span>
+                            <span class="px-2.5 py-1 rounded-full bg-white/70 border border-slate-200 text-xs font-medium text-slate-600">ARIMA</span>
+                            <span class="px-2.5 py-1 rounded-full bg-white/70 border border-slate-200 text-xs font-medium text-slate-600">LSTM</span>
+                            <span class="px-2.5 py-1 rounded-full bg-white/70 border border-slate-200 text-xs font-medium text-slate-600">TFT</span>
+                            <span class="px-2.5 py-1 rounded-full bg-white/70 border border-slate-200 text-xs font-medium text-slate-600">NEAT</span>
+                        </div>
+                    </div>
 
-                        <!-- AI-Tooling -->
-                        <div class="rounded-xl border border-slate-200/60 bg-white/40 backdrop-blur-xl shadow-[0_8px_32px_rgba(31,38,135,0.05)] border border-white/60 p-6 space-y-4">
-                            <div class="flex items-center gap-3">
-                                <i class="fa-solid fa-wand-magic-sparkles text-indigo-600 text-sm" aria-hidden="true"></i>
-                                <span class="text-xs font-mono-tech text-slate-500 uppercase tracking-wider font-semibold">AI-Tooling</span>
-                            </div>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">Claude Code</span>
-                                <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">Codex</span>
-                                <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">Antigravity</span>
-                            </div>
+                    <div class="glass-soft rounded-2xl p-5 space-y-3">
+                        <div class="flex items-center gap-2.5">
+                            <i class="fa-solid fa-wand-magic-sparkles text-blue-600 text-sm" aria-hidden="true"></i>
+                            <span class="text-xs font-mono-tech text-slate-500 uppercase tracking-wider font-semibold">AI-Tooling</span>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2.5 py-1 rounded-full bg-white/70 border border-slate-200 text-xs font-medium text-slate-600">Claude Code</span>
+                            <span class="px-2.5 py-1 rounded-full bg-white/70 border border-slate-200 text-xs font-medium text-slate-600">Codex</span>
+                            <span class="px-2.5 py-1 rounded-full bg-white/70 border border-slate-200 text-xs font-medium text-slate-600">Antigravity</span>
                         </div>
                     </div>
                 </div>
@@ -507,67 +440,64 @@
         </section>
 
         <!-- Werdegang & Ausbildung Section -->
-        <section id="werdegang" class="max-w-7xl mx-auto px-6 py-20 md:py-32 border-b border-slate-200/60 scroll-mt-20">
-            <div class="space-y-16">
-                <!-- Section Header -->
-                <div class="max-w-3xl space-y-4">
-                    <span class="font-mono-tech text-xs tracking-widest text-indigo-600 uppercase font-semibold">Werdegang</span>
-                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight">Beruflicher Werdegang &amp; Ausbildung</h2>
-                    <p class="text-slate-500 font-light text-base md:text-lg">
-                        Ein fokussierter Weg vom quantitativen Studium zur produktiven Datenarbeit.
-                    </p>
+        <section id="werdegang" class="scroll-mt-28">
+            <div class="glass rounded-[2rem] p-8 md:p-12 space-y-10">
+                <div class="max-w-2xl space-y-3">
+                    <span class="font-mono-tech text-xs tracking-widest text-blue-600 uppercase font-semibold">Werdegang</span>
+                    <h2 class="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight">Beruflicher Werdegang &amp; Ausbildung</h2>
+                    <p class="text-slate-600">Ein fokussierter Weg vom quantitativen Studium zur produktiven Datenarbeit.</p>
                 </div>
 
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
 
                     <!-- Berufserfahrung Timeline -->
                     <div class="space-y-6">
-                        <h3 class="text-sm font-mono-tech text-slate-500 uppercase tracking-wider font-semibold flex items-center gap-2">
-                            <i class="fa-solid fa-briefcase text-indigo-600" aria-hidden="true"></i> Berufserfahrung
+                        <h3 class="text-sm font-semibold text-slate-500 uppercase tracking-wider flex items-center gap-2">
+                            <i class="fa-solid fa-briefcase text-blue-600" aria-hidden="true"></i> Berufserfahrung
                         </h3>
-                        <ol class="relative border-l border-slate-200/80 space-y-8 pl-6">
+                        <ol class="relative border-l border-slate-200 space-y-8 pl-6">
                             <li class="relative">
-                                <span class="absolute -left-[1.65rem] top-1 w-3 h-3 rounded-full bg-indigo-500 ring-4 ring-slate-50" aria-hidden="true"></span>
-                                <div class="font-mono-tech text-xs text-indigo-600">04.2026 – heute</div>
+                                <span class="absolute -left-[1.65rem] top-1 w-3 h-3 rounded-full bg-blue-500 ring-4 ring-white" aria-hidden="true"></span>
+                                <div class="font-mono-tech text-xs text-blue-600">04.2026 – heute</div>
                                 <div class="text-slate-900 font-semibold">Consultant</div>
-                                <div class="text-sm text-slate-500 font-light">CareByte GmbH (Rodday-Family-Gruppe)</div>
-                                <p class="text-sm text-slate-500 font-light mt-2">Beratung zu Daten- und Automatisierungslösungen innerhalb der Unternehmensgruppe.</p>
+                                <div class="text-sm text-slate-500">CareByte GmbH (Rodday-Family-Gruppe)</div>
+                                <p class="text-sm text-slate-600 mt-2">Beratung zu Daten- und Automatisierungslösungen innerhalb der Unternehmensgruppe.</p>
                             </li>
                             <li class="relative">
-                                <span class="absolute -left-[1.65rem] top-1 w-3 h-3 rounded-full bg-indigo-500/70 ring-4 ring-slate-50" aria-hidden="true"></span>
+                                <span class="absolute -left-[1.65rem] top-1 w-3 h-3 rounded-full bg-blue-400 ring-4 ring-white" aria-hidden="true"></span>
                                 <div class="font-mono-tech text-xs text-slate-500">01.2025 – 03.2026</div>
                                 <div class="text-slate-900 font-semibold">Data Scientist · Controlling</div>
-                                <div class="text-sm text-slate-500 font-light">Rodday Family GmbH</div>
-                                <ul class="mt-2 space-y-1.5 text-sm text-slate-500 font-light">
-                                    <li class="flex gap-2"><i class="fa-solid fa-angle-right text-indigo-600 mt-1 text-[0.65rem]" aria-hidden="true"></i><span>End-to-End BI &amp; Automatisierung – Datenpipelines von der Beschaffung bis zur Auswertung.</span></li>
-                                    <li class="flex gap-2"><i class="fa-solid fa-angle-right text-indigo-600 mt-1 text-[0.65rem]" aria-hidden="true"></i><span>Reverse Engineering von Web-APIs zur Anbindung undokumentierter Schnittstellen.</span></li>
-                                    <li class="flex gap-2"><i class="fa-solid fa-angle-right text-indigo-600 mt-1 text-[0.65rem]" aria-hidden="true"></i><span>Analytics-Web-App zur Potenzialanalyse als Entscheidungsunterstützung.</span></li>
+                                <div class="text-sm text-slate-500">Rodday Family GmbH</div>
+                                <ul class="mt-2 space-y-1.5 text-sm text-slate-600">
+                                    <li class="flex gap-2"><i class="fa-solid fa-angle-right text-blue-500 mt-1 text-[0.65rem]" aria-hidden="true"></i><span>End-to-End BI &amp; Automatisierung – Datenpipelines von der Beschaffung bis zur Auswertung.</span></li>
+                                    <li class="flex gap-2"><i class="fa-solid fa-angle-right text-blue-500 mt-1 text-[0.65rem]" aria-hidden="true"></i><span>Reverse Engineering von Web-APIs zur Anbindung undokumentierter Schnittstellen.</span></li>
+                                    <li class="flex gap-2"><i class="fa-solid fa-angle-right text-blue-500 mt-1 text-[0.65rem]" aria-hidden="true"></i><span>Analytics-Web-App zur Potenzialanalyse als Entscheidungsunterstützung.</span></li>
                                 </ul>
                             </li>
                             <li class="relative">
-                                <span class="absolute -left-[1.65rem] top-1 w-3 h-3 rounded-full bg-slate-300 ring-4 ring-slate-50" aria-hidden="true"></span>
+                                <span class="absolute -left-[1.65rem] top-1 w-3 h-3 rounded-full bg-slate-300 ring-4 ring-white" aria-hidden="true"></span>
                                 <div class="font-mono-tech text-xs text-slate-500">01.2024 – 12.2024</div>
                                 <div class="text-slate-900 font-semibold">Werkstudent IT &amp; Finance</div>
-                                <div class="text-sm text-slate-500 font-light">Rodday Wundmanagement GmbH</div>
-                                <p class="text-sm text-slate-500 font-light mt-2">Schnittstelle zwischen IT und Finance: Datenaufbereitung, Reporting und erste Automatisierungen.</p>
+                                <div class="text-sm text-slate-500">Rodday Wundmanagement GmbH</div>
+                                <p class="text-sm text-slate-600 mt-2">Schnittstelle zwischen IT und Finance: Datenaufbereitung, Reporting und erste Automatisierungen.</p>
                             </li>
                             <li class="relative">
-                                <span class="absolute -left-[1.65rem] top-1 w-3 h-3 rounded-full bg-slate-300 ring-4 ring-slate-50" aria-hidden="true"></span>
+                                <span class="absolute -left-[1.65rem] top-1 w-3 h-3 rounded-full bg-slate-300 ring-4 ring-white" aria-hidden="true"></span>
                                 <div class="font-mono-tech text-xs text-slate-500">07.2022 – 12.2023</div>
                                 <div class="text-slate-900 font-semibold">Werkstudent Finance</div>
-                                <div class="text-sm text-slate-500 font-light">PEARL GmbH</div>
-                                <ul class="mt-2 space-y-1.5 text-sm text-slate-500 font-light">
-                                    <li class="flex gap-2"><i class="fa-solid fa-angle-right text-indigo-600 mt-1 text-[0.65rem]" aria-hidden="true"></i><span>Durchlaufzeit-Analyse importierter Produkte – von der Bestellung über die Verschiffung in China bis zum Wareneingang im Lager.</span></li>
-                                    <li class="flex gap-2"><i class="fa-solid fa-angle-right text-indigo-600 mt-1 text-[0.65rem]" aria-hidden="true"></i><span>Automatisierungen im Forderungsmanagement, u. a. automatisiertes Ausbuchen zahlungsunfähiger Kunden auf Basis von Creditreform-Daten.</span></li>
+                                <div class="text-sm text-slate-500">PEARL GmbH</div>
+                                <ul class="mt-2 space-y-1.5 text-sm text-slate-600">
+                                    <li class="flex gap-2"><i class="fa-solid fa-angle-right text-blue-500 mt-1 text-[0.65rem]" aria-hidden="true"></i><span>Durchlaufzeit-Analyse importierter Produkte – von der Bestellung über die Verschiffung in China bis zum Wareneingang im Lager.</span></li>
+                                    <li class="flex gap-2"><i class="fa-solid fa-angle-right text-blue-500 mt-1 text-[0.65rem]" aria-hidden="true"></i><span>Automatisierungen im Forderungsmanagement, u. a. automatisiertes Ausbuchen zahlungsunfähiger Kunden auf Basis von Creditreform-Daten.</span></li>
                                 </ul>
                             </li>
                             <li class="relative">
-                                <span class="absolute -left-[1.65rem] top-1 w-3 h-3 rounded-full bg-slate-300 ring-4 ring-slate-50" aria-hidden="true"></span>
+                                <span class="absolute -left-[1.65rem] top-1 w-3 h-3 rounded-full bg-slate-300 ring-4 ring-white" aria-hidden="true"></span>
                                 <div class="font-mono-tech text-xs text-slate-500">05.2016 – 11.2021</div>
                                 <div class="text-slate-900 font-semibold">Werkstudent Finance</div>
-                                <div class="text-sm text-slate-500 font-light">Straumann GmbH</div>
-                                <ul class="mt-2 space-y-1.5 text-sm text-slate-500 font-light">
-                                    <li class="flex gap-2"><i class="fa-solid fa-angle-right text-indigo-600 mt-1 text-[0.65rem]" aria-hidden="true"></i><span>Verantwortung für das Mahnwesen; Entwicklung eines VBA-Algorithmus zur Automatisierung des Mahnlaufs in SAP.</span></li>
+                                <div class="text-sm text-slate-500">Straumann GmbH</div>
+                                <ul class="mt-2 space-y-1.5 text-sm text-slate-600">
+                                    <li class="flex gap-2"><i class="fa-solid fa-angle-right text-blue-500 mt-1 text-[0.65rem]" aria-hidden="true"></i><span>Verantwortung für das Mahnwesen; Entwicklung eines VBA-Algorithmus zur Automatisierung des Mahnlaufs in SAP.</span></li>
                                 </ul>
                             </li>
                         </ol>
@@ -576,34 +506,34 @@
                     <!-- Ausbildung & Sprachen -->
                     <div class="space-y-10">
                         <div class="space-y-6">
-                            <h3 class="text-sm font-mono-tech text-slate-500 uppercase tracking-wider font-semibold flex items-center gap-2">
-                                <i class="fa-solid fa-graduation-cap text-indigo-600" aria-hidden="true"></i> Ausbildung
+                            <h3 class="text-sm font-semibold text-slate-500 uppercase tracking-wider flex items-center gap-2">
+                                <i class="fa-solid fa-graduation-cap text-blue-600" aria-hidden="true"></i> Ausbildung
                             </h3>
-                            <ol class="relative border-l border-slate-200/80 space-y-8 pl-6">
+                            <ol class="relative border-l border-slate-200 space-y-8 pl-6">
                                 <li class="relative">
-                                    <span class="absolute -left-[1.65rem] top-1 w-3 h-3 rounded-full bg-indigo-500/70 ring-4 ring-slate-50" aria-hidden="true"></span>
+                                    <span class="absolute -left-[1.65rem] top-1 w-3 h-3 rounded-full bg-blue-400 ring-4 ring-white" aria-hidden="true"></span>
                                     <div class="font-mono-tech text-xs text-slate-500">10.2022 – 12.2024</div>
                                     <div class="text-slate-900 font-semibold">Studium der Statistik &amp; Data Science</div>
-                                    <div class="text-sm text-slate-500 font-light">LMU München · Nebenfach Volkswirtschaftslehre</div>
+                                    <div class="text-sm text-slate-500">LMU München · Nebenfach Volkswirtschaftslehre</div>
                                 </li>
                                 <li class="relative">
-                                    <span class="absolute -left-[1.65rem] top-1 w-3 h-3 rounded-full bg-slate-300 ring-4 ring-slate-50" aria-hidden="true"></span>
+                                    <span class="absolute -left-[1.65rem] top-1 w-3 h-3 rounded-full bg-slate-300 ring-4 ring-white" aria-hidden="true"></span>
                                     <div class="font-mono-tech text-xs text-slate-500">10.2015 – 10.2022</div>
                                     <div class="text-slate-900 font-semibold">Studium der Volkswirtschaftslehre</div>
-                                    <div class="text-sm text-slate-500 font-light">Albert-Ludwigs-Universität Freiburg</div>
+                                    <div class="text-sm text-slate-500">Albert-Ludwigs-Universität Freiburg</div>
                                 </li>
                             </ol>
                         </div>
 
                         <div class="space-y-4">
-                            <h3 class="text-sm font-mono-tech text-slate-500 uppercase tracking-wider font-semibold flex items-center gap-2">
-                                <i class="fa-solid fa-language text-indigo-600" aria-hidden="true"></i> Sprachen
+                            <h3 class="text-sm font-semibold text-slate-500 uppercase tracking-wider flex items-center gap-2">
+                                <i class="fa-solid fa-language text-blue-600" aria-hidden="true"></i> Sprachen
                             </h3>
                             <div class="flex flex-wrap gap-2">
-                                <span class="px-3 py-1.5 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">Deutsch · Muttersprache</span>
-                                <span class="px-3 py-1.5 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">Englisch · Verhandlungssicher</span>
-                                <span class="px-3 py-1.5 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">Italienisch · Grundkenntnisse</span>
-                                <span class="px-3 py-1.5 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">Französisch · Grundkenntnisse</span>
+                                <span class="px-3 py-1.5 rounded-full bg-white/70 border border-slate-200 text-xs font-medium text-slate-600">Deutsch · Muttersprache</span>
+                                <span class="px-3 py-1.5 rounded-full bg-white/70 border border-slate-200 text-xs font-medium text-slate-600">Englisch · Verhandlungssicher</span>
+                                <span class="px-3 py-1.5 rounded-full bg-white/70 border border-slate-200 text-xs font-medium text-slate-600">Italienisch · Grundkenntnisse</span>
+                                <span class="px-3 py-1.5 rounded-full bg-white/70 border border-slate-200 text-xs font-medium text-slate-600">Französisch · Grundkenntnisse</span>
                             </div>
                         </div>
                     </div>
@@ -612,115 +542,105 @@
         </section>
 
         <!-- Projekte Section -->
-        <section id="projekte" class="max-w-7xl mx-auto px-6 py-20 md:py-32 border-b border-slate-200/60 scroll-mt-20">
-            <div class="space-y-16">
-                <!-- Section Header -->
-                <div class="max-w-3xl space-y-4">
-                    <span class="font-mono-tech text-xs tracking-widest text-indigo-600 uppercase font-semibold">Projekte</span>
-                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight">Ausgewählte Projekte</h2>
-                    <p class="text-slate-500 font-light text-base md:text-lg">
-                        Lösungsorientierte Anwendungen – von der Datenarchitektur bis in den produktiven Betrieb.
-                    </p>
-                </div>
+        <section id="projekte" class="scroll-mt-28 space-y-6">
+            <div class="max-w-2xl space-y-3 px-2">
+                <span class="font-mono-tech text-xs tracking-widest text-blue-600 uppercase font-semibold">Projekte</span>
+                <h2 class="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight">Ausgewählte Projekte</h2>
+                <p class="text-slate-600">Lösungsorientierte Anwendungen – von der Datenarchitektur bis in den produktiven Betrieb.</p>
+            </div>
 
-                <!-- Featured: nutrition-fit.com -->
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
 
-                    <!-- Project Card: nutrition-fit.com -->
-                    <a href="https://nutrition-fit.com" target="_blank" rel="noopener noreferrer"
-                       class="group relative rounded-xl border border-slate-200/60 bg-white/40 backdrop-blur-xl shadow-[0_8px_32px_rgba(31,38,135,0.05)] border border-white/60 p-8 space-y-6 hover:border-indigo-500/30 hover:shadow-[0_0_30px_rgba(99,102,241,0.08)] transition-all duration-300 block">
-                        <div class="flex items-center justify-between">
-                            <div class="w-12 h-12 rounded bg-indigo-50/80 border border-indigo-500/20 flex items-center justify-center text-indigo-600 text-lg shadow-[0_0_10px_rgba(99,102,241,0.1)] group-hover:scale-105 transition-transform">
-                                <i class="fa-solid fa-utensils" aria-hidden="true"></i>
-                            </div>
-                            <span class="text-xs font-mono-tech text-slate-500 font-semibold flex items-center gap-1.5">
-                                LIVE
-                                <span class="w-1.5 h-1.5 rounded-full bg-indigo-500 animate-pulse" aria-hidden="true"></span>
-                            </span>
+                <!-- Project Card: nutrition-fit.com -->
+                <a href="https://nutrition-fit.com" target="_blank" rel="noopener noreferrer"
+                   class="group glass rounded-[1.75rem] p-7 space-y-5 hover:-translate-y-1 transition-all duration-300 block">
+                    <div class="flex items-center justify-between">
+                        <div class="w-12 h-12 rounded-2xl bg-blue-50 border border-blue-100 flex items-center justify-center text-blue-600 text-lg">
+                            <i class="fa-solid fa-utensils" aria-hidden="true"></i>
                         </div>
-                        <div class="space-y-2">
-                            <h3 class="text-xl font-bold text-slate-900 group-hover:text-indigo-600 transition-colors flex items-center gap-2">
-                                nutrition-fit.com
-                                <i class="fa-solid fa-arrow-up-right-from-square text-xs text-slate-500 group-hover:text-indigo-600 transition-colors" aria-hidden="true"></i>
-                            </h3>
-                            <p class="text-xs font-mono-tech text-slate-500">Eigenentwicklung · KI-gestützte Ernährungs- &amp; Fitness-Plattform</p>
-                        </div>
-                        <p class="text-sm text-slate-500 leading-relaxed font-light">
-                            Eigenständig konzipierte Webanwendung für Ernährungs- und Aktivitätstracking. Natürlichsprachliches Meal-Logging und automatisierte Ernährungsplanung über eine LLM-Integration, gestützt auf eine strukturierte Lebensmittel- und Aktivitätsdatenbank. Ein praktischer Beleg für lösungsorientierte KI-Tools – von der Datenmodellierung bis zur produktiven Anwendung.
-                        </p>
-                        <!-- Tech stack tag cloud -->
-                        <div class="flex flex-wrap gap-2 pt-4 border-t border-slate-200/60">
-                            <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">Python</span>
-                            <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">Flask</span>
-                            <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">LLM-Integration</span>
-                            <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">SQL</span>
-                            <span class="px-2 py-1 rounded bg-white/50 backdrop-blur-md shadow-sm border border-slate-200/80 text-xs font-mono-tech text-slate-700">REST API</span>
-                        </div>
-                    </a>
-
-                    <!-- Berufliche Projekte (Auszug) -->
-                    <div class="rounded-xl border border-slate-200/60 bg-white/40 backdrop-blur-xl shadow-[0_8px_32px_rgba(31,38,135,0.05)] border border-white/60 p-8 space-y-6">
-                        <div class="flex items-center justify-between">
-                            <div class="w-12 h-12 rounded bg-indigo-50/80 border border-indigo-500/20 flex items-center justify-center text-indigo-600 text-lg shadow-[0_0_10px_rgba(99,102,241,0.1)]">
-                                <i class="fa-solid fa-diagram-project" aria-hidden="true"></i>
-                            </div>
-                            <span class="text-xs font-mono-tech text-slate-500 font-semibold">AUSZUG</span>
-                        </div>
-                        <div class="space-y-2">
-                            <h3 class="text-xl font-bold text-slate-900">Berufliche Projekte</h3>
-                            <p class="text-xs font-mono-tech text-slate-500">Controlling-Umfeld eines Unternehmensverbunds</p>
-                        </div>
-                        <ul class="space-y-4 text-sm text-slate-500 font-light">
-                            <li class="flex gap-3">
-                                <i class="fa-solid fa-angle-right text-indigo-600 mt-1 text-xs" aria-hidden="true"></i>
-                                <span><span class="text-slate-800 font-medium">End-to-End BI &amp; Automatisierung</span> – Aufbau mehrerer Datenpipelines von der Datenbeschaffung bis zur Auswertung inkl. interaktiver Power-BI-Reports.</span>
-                            </li>
-                            <li class="flex gap-3">
-                                <i class="fa-solid fa-angle-right text-indigo-600 mt-1 text-xs" aria-hidden="true"></i>
-                                <span><span class="text-slate-800 font-medium">Reverse Engineering von Web-APIs</span> – Erschließung undokumentierter Schnittstellen inkl. Mapping, Authentifizierung und Synchronisationsläufen.</span>
-                            </li>
-                            <li class="flex gap-3">
-                                <i class="fa-solid fa-angle-right text-indigo-600 mt-1 text-xs" aria-hidden="true"></i>
-                                <span><span class="text-slate-800 font-medium">Analytics-Web-App zur Potenzialanalyse</span> – betriebswirtschaftliche Modellierung als entscheidungsunterstützende Anwendung.</span>
-                            </li>
-                        </ul>
+                        <span class="text-xs font-semibold text-blue-600 flex items-center gap-1.5">
+                            LIVE
+                            <span class="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse" aria-hidden="true"></span>
+                        </span>
                     </div>
+                    <div class="space-y-1">
+                        <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+                            nutrition-fit.com
+                            <i class="fa-solid fa-arrow-up-right-from-square text-xs text-slate-400 group-hover:text-blue-600 transition-colors" aria-hidden="true"></i>
+                        </h3>
+                        <p class="text-xs font-mono-tech text-slate-500">Eigenentwicklung · KI-gestützte Ernährungs- &amp; Fitness-Plattform</p>
+                    </div>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        Eigenständig konzipierte Webanwendung für Ernährungs- und Aktivitätstracking. Natürlichsprachliches Meal-Logging und automatisierte Ernährungsplanung über eine LLM-Integration, gestützt auf eine strukturierte Lebensmittel- und Aktivitätsdatenbank. Ein praktischer Beleg für lösungsorientierte KI-Tools – von der Datenmodellierung bis zur produktiven Anwendung.
+                    </p>
+                    <div class="flex flex-wrap gap-2 pt-4 border-t border-slate-200/70">
+                        <span class="px-2.5 py-1 rounded-full bg-white/70 border border-slate-200 text-xs font-medium text-slate-600">Python</span>
+                        <span class="px-2.5 py-1 rounded-full bg-white/70 border border-slate-200 text-xs font-medium text-slate-600">Flask</span>
+                        <span class="px-2.5 py-1 rounded-full bg-white/70 border border-slate-200 text-xs font-medium text-slate-600">LLM-Integration</span>
+                        <span class="px-2.5 py-1 rounded-full bg-white/70 border border-slate-200 text-xs font-medium text-slate-600">SQL</span>
+                        <span class="px-2.5 py-1 rounded-full bg-white/70 border border-slate-200 text-xs font-medium text-slate-600">REST API</span>
+                    </div>
+                </a>
 
+                <!-- Berufliche Projekte (Auszug) -->
+                <div class="glass rounded-[1.75rem] p-7 space-y-5">
+                    <div class="flex items-center justify-between">
+                        <div class="w-12 h-12 rounded-2xl bg-blue-50 border border-blue-100 flex items-center justify-center text-blue-600 text-lg">
+                            <i class="fa-solid fa-diagram-project" aria-hidden="true"></i>
+                        </div>
+                        <span class="text-xs font-mono-tech text-slate-400 font-semibold">AUSZUG</span>
+                    </div>
+                    <div class="space-y-1">
+                        <h3 class="text-lg font-bold text-slate-900">Berufliche Projekte</h3>
+                        <p class="text-xs font-mono-tech text-slate-500">Controlling-Umfeld eines Unternehmensverbunds</p>
+                    </div>
+                    <ul class="space-y-4 text-sm text-slate-600">
+                        <li class="flex gap-3">
+                            <i class="fa-solid fa-angle-right text-blue-500 mt-1 text-xs" aria-hidden="true"></i>
+                            <span><span class="text-slate-900 font-semibold">End-to-End BI &amp; Automatisierung</span> – Aufbau mehrerer Datenpipelines von der Datenbeschaffung bis zur Auswertung inkl. interaktiver Power-BI-Reports.</span>
+                        </li>
+                        <li class="flex gap-3">
+                            <i class="fa-solid fa-angle-right text-blue-500 mt-1 text-xs" aria-hidden="true"></i>
+                            <span><span class="text-slate-900 font-semibold">Reverse Engineering von Web-APIs</span> – Erschließung undokumentierter Schnittstellen inkl. Mapping, Authentifizierung und Synchronisationsläufen.</span>
+                        </li>
+                        <li class="flex gap-3">
+                            <i class="fa-solid fa-angle-right text-blue-500 mt-1 text-xs" aria-hidden="true"></i>
+                            <span><span class="text-slate-900 font-semibold">Analytics-Web-App zur Potenzialanalyse</span> – betriebswirtschaftliche Modellierung als entscheidungsunterstützende Anwendung.</span>
+                        </li>
+                    </ul>
                 </div>
+
             </div>
         </section>
 
         <!-- Referenz / Testimonial Section -->
-        <section id="referenz" class="max-w-7xl mx-auto px-6 py-16 md:py-24 border-b border-slate-200/60">
-            <figure class="max-w-4xl mx-auto text-center space-y-6">
-                <i class="fa-solid fa-quote-left text-indigo-500/40 text-3xl" aria-hidden="true"></i>
-                <blockquote class="text-lg md:text-2xl text-slate-800 font-light leading-relaxed">
-                    „Besonders hervorzuheben ist seine Fähigkeit, End-to-End-Lösungen von der Anforderungsanalyse über die technische Implementierung bis zur erfolgreichen Überführung in den produktiven Betrieb umzusetzen. Durch seine Automatisierungen, Reports und Integrationslösungen wurden manuelle Aufwände reduziert und die Datenverfügbarkeit sowie Transparenz in Steuerungsprozessen spürbar verbessert.“
-                </blockquote>
-                <figcaption class="font-mono-tech text-xs tracking-wider text-slate-500 uppercase">
-                    — Auszug aus einem Arbeitszeugnis, 2026
-                </figcaption>
-            </figure>
+        <section id="referenz" class="scroll-mt-28">
+            <div class="glass rounded-[2rem] p-8 md:p-14">
+                <figure class="max-w-3xl mx-auto text-center space-y-5">
+                    <i class="fa-solid fa-quote-left text-blue-500/40 text-3xl" aria-hidden="true"></i>
+                    <blockquote class="text-lg md:text-xl text-slate-700 leading-relaxed">
+                        „Besonders hervorzuheben ist seine Fähigkeit, End-to-End-Lösungen von der Anforderungsanalyse über die technische Implementierung bis zur erfolgreichen Überführung in den produktiven Betrieb umzusetzen. Durch seine Automatisierungen, Reports und Integrationslösungen wurden manuelle Aufwände reduziert und die Datenverfügbarkeit sowie Transparenz in Steuerungsprozessen spürbar verbessert.“
+                    </blockquote>
+                    <figcaption class="font-mono-tech text-xs tracking-wider text-slate-500 uppercase">
+                        — Auszug aus einem Arbeitszeugnis, 2026
+                    </figcaption>
+                </figure>
+            </div>
         </section>
 
         <!-- Kontakt / CTA Section -->
-        <section id="kontakt" class="relative max-w-7xl mx-auto px-6 py-20 md:py-32 scroll-mt-20">
-            <div class="relative rounded-2xl border border-slate-200/60 bg-gradient-to-b from-white/70 to-indigo-50/50 backdrop-blur-sm p-8 md:p-16 text-center space-y-8 overflow-hidden shadow-2xl">
-                <!-- Decorative background elements -->
-                <div class="absolute -top-12 -left-12 w-48 h-48 rounded-full bg-indigo-600/5 blur-3xl pointer-events-none"></div>
-                <div class="absolute -bottom-12 -right-12 w-48 h-48 rounded-full bg-blue-500/5 blur-3xl pointer-events-none"></div>
-
-                <div class="max-w-2xl mx-auto space-y-6 relative z-10">
-                    <span class="font-mono-tech text-xs tracking-widest text-indigo-600 uppercase font-semibold">Architekturdialog</span>
-                    <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">
+        <section id="kontakt" class="scroll-mt-28">
+            <div class="glass rounded-[2rem] p-8 md:p-16 text-center">
+                <div class="max-w-2xl mx-auto space-y-5">
+                    <span class="font-mono-tech text-xs tracking-widest text-blue-600 uppercase font-semibold">Architekturdialog</span>
+                    <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 tracking-tight">
                         Offen für fachlichen Austausch und anspruchsvolle Architektur-Themen.
                     </h2>
-                    <p class="text-slate-500 font-light leading-relaxed">
+                    <p class="text-slate-600 leading-relaxed">
                         Ob komplexe Datenmigration, Bewertung einer bestehenden ETL-Architektur oder intelligente Prozessautomatisierung – ich freue mich auf ein unverbindliches Gespräch.
                     </p>
-
-                    <div class="pt-6">
-                        <a href="mailto:stubanus@googlemail.com?subject=Anfrage%20Datenarchitektur%20%2F%20Automatisierung" class="inline-flex items-center gap-3 px-8 py-4 rounded bg-slate-900 hover:bg-slate-800 text-white shadow-md font-semibold text-sm transition-all duration-200 shadow-[0_0_30px_rgba(255,255,255,0.05)] hover:scale-[1.02]">
+                    <div class="pt-4">
+                        <a href="mailto:stubanus@googlemail.com?subject=Anfrage%20Datenarchitektur%20%2F%20Automatisierung" class="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-slate-900 hover:bg-slate-700 text-white font-semibold text-sm transition-all duration-200 hover:scale-[1.02]">
                             <i class="fa-regular fa-envelope text-base" aria-hidden="true"></i>
                             Kontakt initiieren
                         </a>
@@ -732,12 +652,12 @@
     </main>
 
     <!-- Footer -->
-    <footer class="border-t border-slate-200/60 bg-transparent py-8 text-center text-xs text-slate-500 font-mono-tech">
-        <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+    <footer class="py-8 text-center text-xs text-slate-500">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
             <p>&copy; 2026 Alexander Stubanus. Alle Rechte vorbehalten.</p>
-            <nav class="flex flex-wrap justify-center gap-6 text-slate-500" aria-label="Footer-Navigation">
+            <nav class="flex flex-wrap justify-center gap-6" aria-label="Footer-Navigation">
                 <a href="#home" class="hover:text-slate-900 transition-colors">Home</a>
-                <a href="#philosophie" class="hover:text-slate-900 transition-colors">Philosophie</a>
+                <a href="#philosophie" class="hover:text-slate-900 transition-colors">Profil</a>
                 <a href="#expertise" class="hover:text-slate-900 transition-colors">Expertise</a>
                 <a href="#werdegang" class="hover:text-slate-900 transition-colors">Werdegang</a>
                 <a href="#projekte" class="hover:text-slate-900 transition-colors">Projekte</a>
@@ -757,15 +677,15 @@
             // 1. Navbar Scroll Style Adjustment
             const handleScroll = () => {
                 if (window.scrollY > 20) {
-                    header.classList.add('bg-transparent/90', 'shadow-lg');
+                    header.classList.add('bg-white/80', 'shadow-sm');
                     header.classList.remove('bg-white/60');
                 } else {
-                    header.classList.remove('bg-transparent/90', 'shadow-lg');
+                    header.classList.remove('bg-white/80', 'shadow-sm');
                     header.classList.add('bg-white/60');
                 }
             };
             window.addEventListener('scroll', handleScroll, { passive: true });
-            handleScroll(); // Trigger once on load
+            handleScroll();
 
             // 2. Mobile Menu Toggle
             const toggleMobileMenu = () => {
@@ -791,7 +711,6 @@
                 mobileMenuBtn.addEventListener('click', toggleMobileMenu);
             }
 
-            // Expose function for inline link onclick events
             window.toggleMobileMenu = () => {
                 if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
                     toggleMobileMenu();
@@ -811,7 +730,7 @@
 
             const highlightNavigation = () => {
                 let currentActiveSectionId = '';
-                const scrollPosition = window.scrollY + 120; // offset for sticky header
+                const scrollPosition = window.scrollY + 140;
 
                 sections.forEach(section => {
                     const sectionTop = section.offsetTop;
@@ -821,15 +740,14 @@
                     }
                 });
 
-                // Reset and apply active colors safely
                 Object.keys(navLinks).forEach(id => {
                     const link = navLinks[id];
                     if (link) {
                         if (id === currentActiveSectionId) {
                             link.classList.remove('text-slate-500');
-                            link.classList.add('text-indigo-600');
+                            link.classList.add('text-blue-600', 'font-semibold');
                         } else {
-                            link.classList.remove('text-indigo-600');
+                            link.classList.remove('text-blue-600', 'font-semibold');
                             link.classList.add('text-slate-500');
                         }
                     }
@@ -837,7 +755,7 @@
             };
 
             window.addEventListener('scroll', highlightNavigation, { passive: true });
-            highlightNavigation(); // Trigger once on load
+            highlightNavigation();
         });
     </script>
 </body>
