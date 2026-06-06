@@ -719,6 +719,180 @@
         </div>
     </footer>
 
+    <!-- AI Recruiter Chatbot UI -->
+    <div id="ai-chat-container" class="fixed bottom-6 right-6 z-[100] flex flex-col items-end pointer-events-none">
+        
+        <!-- Chat Window -->
+        <div id="ai-chat-window" class="glass rounded-2xl w-[350px] max-w-[calc(100vw-3rem)] h-[500px] max-h-[calc(100vh-8rem)] mb-4 flex flex-col overflow-hidden transition-all duration-300 opacity-0 translate-y-10 pointer-events-auto" style="display: none;">
+            
+            <!-- Header -->
+            <div class="p-4 border-b border-white/40 bg-white/60 backdrop-blur-md flex justify-between items-center">
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center text-white">
+                        <i class="fa-solid fa-robot"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-slate-900 text-sm">AI Recruiter</h3>
+                        <p class="text-xs text-slate-500">Alexander's AI Assistant</p>
+                    </div>
+                </div>
+                <button id="ai-chat-close" class="text-slate-400 hover:text-slate-900 transition-colors w-8 h-8 flex items-center justify-center rounded-full hover:bg-white/50">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            
+            <!-- Messages Area -->
+            <div id="ai-chat-messages" class="flex-1 p-4 overflow-y-auto flex flex-col gap-3 scroll-smooth bg-slate-50/30">
+                <!-- Initial Message -->
+                <div class="flex flex-col items-start max-w-[85%]">
+                    <div class="px-4 py-2.5 rounded-2xl rounded-tl-sm bg-white border border-slate-200 text-sm text-slate-700 shadow-sm leading-relaxed">
+                        Hi! 👋 I'm Alexander's AI Assistant. Do you have any questions about his skills, experience, or are you looking for a solution to a specific Data/AI problem?
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Input Area -->
+            <div class="p-3 border-t border-white/40 bg-white/60 backdrop-blur-md">
+                <form id="ai-chat-form" class="relative flex items-center">
+                    <input type="text" id="ai-chat-input" placeholder="Ask a question..." class="w-full bg-white border border-slate-300 rounded-full pl-4 pr-12 py-2.5 text-sm focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all shadow-inner" autocomplete="off">
+                    <button type="submit" id="ai-chat-submit" class="absolute right-1 w-8 h-8 flex items-center justify-center rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-colors shadow-sm disabled:opacity-50">
+                        <i class="fa-solid fa-paper-plane text-xs"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Toggle Button -->
+        <button id="ai-chat-toggle" class="w-14 h-14 rounded-full bg-slate-900 text-white flex items-center justify-center shadow-xl hover:scale-110 hover:shadow-2xl transition-all duration-300 pointer-events-auto border-2 border-white/20 relative group">
+            <span class="absolute -top-1 -right-1 flex h-3 w-3">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-3 w-3 bg-blue-500"></span>
+            </span>
+            <i class="fa-solid fa-robot text-xl group-hover:hidden"></i>
+            <i class="fa-solid fa-comment-dots text-xl hidden group-hover:block"></i>
+        </button>
+    </div>
+
+    <!-- AI Chatbot Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggleBtn = document.getElementById('ai-chat-toggle');
+            const closeBtn = document.getElementById('ai-chat-close');
+            const chatWindow = document.getElementById('ai-chat-window');
+            const chatForm = document.getElementById('ai-chat-form');
+            const chatInput = document.getElementById('ai-chat-input');
+            const messagesContainer = document.getElementById('ai-chat-messages');
+            const submitBtn = document.getElementById('ai-chat-submit');
+            
+            // NOTE: URL should be updated when deployed to the real backend
+            const API_URL = "http://localhost:8000/api/chat";
+            
+            let messages = [];
+
+            const toggleChat = () => {
+                if (chatWindow.style.display === 'none') {
+                    chatWindow.style.display = 'flex';
+                    // Trigger reflow for transition
+                    chatWindow.offsetHeight; 
+                    chatWindow.classList.remove('opacity-0', 'translate-y-10');
+                    chatWindow.classList.add('opacity-100', 'translate-y-0');
+                    chatInput.focus();
+                } else {
+                    chatWindow.classList.remove('opacity-100', 'translate-y-0');
+                    chatWindow.classList.add('opacity-0', 'translate-y-10');
+                    setTimeout(() => {
+                        chatWindow.style.display = 'none';
+                    }, 300);
+                }
+            };
+
+            toggleBtn.addEventListener('click', toggleChat);
+            closeBtn.addEventListener('click', toggleChat);
+
+            const appendMessage = (role, text) => {
+                const msgDiv = document.createElement('div');
+                msgDiv.className = `flex flex-col ${role === 'user' ? 'items-end' : 'items-start'} max-w-[85%] ${role === 'user' ? 'self-end' : ''}`;
+                
+                const bubble = document.createElement('div');
+                
+                if (role === 'user') {
+                    bubble.className = "px-4 py-2.5 rounded-2xl rounded-tr-sm bg-slate-900 text-white text-sm shadow-sm leading-relaxed";
+                } else if (role === 'assistant') {
+                    bubble.className = "px-4 py-2.5 rounded-2xl rounded-tl-sm bg-white border border-slate-200 text-sm text-slate-700 shadow-sm leading-relaxed markdown-content";
+                    text = text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+                    text = text.replace(/\n/g, '<br/>');
+                } else {
+                    bubble.className = "px-4 py-2.5 rounded-2xl bg-red-50 border border-red-200 text-sm text-red-600 shadow-sm leading-relaxed";
+                }
+                
+                bubble.innerHTML = text;
+                msgDiv.appendChild(bubble);
+                messagesContainer.appendChild(msgDiv);
+                messagesContainer.scrollTop = messagesContainer.scrollHeight;
+            };
+
+            const setTypingIndicator = (show) => {
+                if (show) {
+                    const typingDiv = document.createElement('div');
+                    typingDiv.id = 'ai-typing-indicator';
+                    typingDiv.className = 'flex flex-col items-start max-w-[85%]';
+                    typingDiv.innerHTML = `
+                        <div class="px-4 py-3 rounded-2xl rounded-tl-sm bg-white border border-slate-200 text-sm shadow-sm flex items-center gap-1.5">
+                            <span class="w-1.5 h-1.5 bg-slate-400 rounded-full animate-bounce"></span>
+                            <span class="w-1.5 h-1.5 bg-slate-400 rounded-full animate-bounce" style="animation-delay: 0.2s"></span>
+                            <span class="w-1.5 h-1.5 bg-slate-400 rounded-full animate-bounce" style="animation-delay: 0.4s"></span>
+                        </div>
+                    `;
+                    messagesContainer.appendChild(typingDiv);
+                    messagesContainer.scrollTop = messagesContainer.scrollHeight;
+                } else {
+                    const indicator = document.getElementById('ai-typing-indicator');
+                    if (indicator) indicator.remove();
+                }
+            };
+
+            chatForm.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                const text = chatInput.value.trim();
+                if (!text) return;
+                
+                appendMessage('user', text);
+                messages.push({ role: 'user', content: text });
+                
+                chatInput.value = '';
+                chatInput.disabled = true;
+                submitBtn.disabled = true;
+                setTypingIndicator(true);
+                
+                try {
+                    const response = await fetch(API_URL, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ messages: messages })
+                    });
+                    
+                    if (!response.ok) throw new Error('Network error');
+                    
+                    const data = await response.json();
+                    setTypingIndicator(false);
+                    
+                    if (data.response) {
+                        appendMessage('assistant', data.response);
+                        messages.push({ role: 'assistant', content: data.response });
+                    }
+                } catch (error) {
+                    setTypingIndicator(false);
+                    console.error("API Error:", error);
+                    appendMessage('error', 'Sorry, the AI API is currently unavailable. Please contact Alexander directly using the contact form.');
+                } finally {
+                    chatInput.disabled = false;
+                    submitBtn.disabled = false;
+                    chatInput.focus();
+                }
+            });
+        });
+    </script>
+
     <!-- JavaScript Interactions -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
