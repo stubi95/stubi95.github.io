@@ -1125,5 +1125,110 @@
             highlightNavigation();
         });
     </script>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="fixed inset-0 z-50 bg-slate-900/95 backdrop-blur-sm hidden items-center justify-center opacity-0 transition-opacity duration-300" aria-modal="true" role="dialog">
+        <button onclick="closeLightbox()" class="absolute top-6 right-6 text-white/70 hover:text-white p-2 focus:outline-none z-50" aria-label="Schließen">
+            <i class="fa-solid fa-xmark text-3xl" aria-hidden="true"></i>
+        </button>
+
+        <button id="lightbox-prev" onclick="prevSlide()" class="absolute left-4 md:left-10 top-1/2 -translate-y-1/2 text-white/50 hover:text-white p-4 focus:outline-none transition-colors z-50 hidden" aria-label="Zurück">
+            <i class="fa-solid fa-chevron-left text-4xl drop-shadow-md" aria-hidden="true"></i>
+        </button>
+        <button id="lightbox-next" onclick="nextSlide()" class="absolute right-4 md:right-10 top-1/2 -translate-y-1/2 text-white/50 hover:text-white p-4 focus:outline-none transition-colors z-50 hidden" aria-label="Vor">
+            <i class="fa-solid fa-chevron-right text-4xl drop-shadow-md" aria-hidden="true"></i>
+        </button>
+
+        <div class="relative max-w-5xl w-full max-h-[90vh] flex flex-col items-center px-4 md:px-24">
+            <img id="lightbox-img" src="" alt="Zeugnis" class="max-h-[85vh] object-contain rounded-md shadow-2xl transition-transform duration-300 select-none">
+            <div id="lightbox-counter" class="absolute bottom-[-30px] left-1/2 -translate-x-1/2 text-white/70 text-sm font-mono-tech tracking-wider">
+                1 / 1
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentLightboxImages = [];
+        let currentImageIndex = 0;
+
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxPrev = document.getElementById('lightbox-prev');
+        const lightboxNext = document.getElementById('lightbox-next');
+        const lightboxCounter = document.getElementById('lightbox-counter');
+
+        window.openLightbox = function(imagesArray) {
+            currentLightboxImages = imagesArray;
+            currentImageIndex = 0;
+            
+            updateLightboxUI();
+            
+            lightbox.classList.remove('hidden');
+            setTimeout(() => {
+                lightbox.classList.add('flex');
+                lightbox.classList.remove('opacity-0');
+                lightbox.classList.add('opacity-100');
+            }, 10);
+            
+            document.body.style.overflow = 'hidden';
+        }
+
+        window.closeLightbox = function() {
+            lightbox.classList.remove('opacity-100');
+            lightbox.classList.add('opacity-0');
+            
+            setTimeout(() => {
+                lightbox.classList.add('hidden');
+                lightbox.classList.remove('flex');
+                document.body.style.overflow = '';
+            }, 300);
+        }
+
+        window.nextSlide = function() {
+            if (currentImageIndex < currentLightboxImages.length - 1) {
+                currentImageIndex++;
+                updateLightboxUI();
+            }
+        }
+
+        window.prevSlide = function() {
+            if (currentImageIndex > 0) {
+                currentImageIndex--;
+                updateLightboxUI();
+            }
+        }
+
+        function updateLightboxUI() {
+            lightboxImg.src = currentLightboxImages[currentImageIndex];
+            lightboxCounter.textContent = `${currentImageIndex + 1} / ${currentLightboxImages.length}`;
+
+            if (currentLightboxImages.length > 1) {
+                lightboxPrev.classList.remove('hidden');
+                lightboxNext.classList.remove('hidden');
+                
+                lightboxPrev.style.opacity = currentImageIndex === 0 ? '0.2' : '1';
+                lightboxPrev.style.cursor = currentImageIndex === 0 ? 'default' : 'pointer';
+                
+                lightboxNext.style.opacity = currentImageIndex === currentLightboxImages.length - 1 ? '0.2' : '1';
+                lightboxNext.style.cursor = currentImageIndex === currentLightboxImages.length - 1 ? 'default' : 'pointer';
+            } else {
+                lightboxPrev.classList.add('hidden');
+                lightboxNext.classList.add('hidden');
+            }
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (lightbox.classList.contains('hidden')) return;
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowRight') nextSlide();
+            if (e.key === 'ArrowLeft') prevSlide();
+        });
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox || (e.target.parentElement === lightbox && e.target !== lightboxImg && e.target.tagName !== 'BUTTON' && e.target.tagName !== 'I')) {
+                closeLightbox();
+            }
+        });
+    </script>
 </body>
 </html>
