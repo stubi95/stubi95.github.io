@@ -20,7 +20,7 @@ PROFIL-FAKTEN:
   * Sprachen, Web & Data Systems: Python, SQL (PostgreSQL), R, HTML/CSS, JavaScript, Data Warehouses, Data Lakes, VBA, Git.
   * Microsoft & Cloud: Microsoft Azure, Microsoft Fabric, Power BI, Power Apps, Power Automate, MS Office.
   * Machine Learning & Forecasting: XGBoost, CatBoost, Random Forest, KNN, Prophet, ARIMA, LSTM, TFT, NEAT.
-  * AI-Tooling: Claude Code, Codex, Antigravity.
+  * AI-Tooling: Claude Code, Codex, Antigravity, Langdock.
   * Backend & Architektur: REST APIs, Docker, System Prompting, Model Context Protocol (MCP), Flask, FastAPI.
 - Besondere Projekte: 
   1. nutrition-fit.com (Full-Stack Agentic AI App, Claude 4.5, MCP, sicheres Backend)
