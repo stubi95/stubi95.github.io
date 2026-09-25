@@ -17,6 +17,7 @@ app = FastAPI(title="Stubanus Consulting Chat Assistant")
 # still accepted for existing deployments.
 _origins = {
     "https://stubi95.github.io",
+    "https://stubanus-consulting.de",
     "https://www.stubanus-consulting.de",
 }
 _origins.update(
