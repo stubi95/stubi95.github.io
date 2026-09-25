@@ -88,7 +88,6 @@ async def chat_endpoint(request: ChatRequest):
         response = client.messages.create(
             model="claude-haiku-4-5-20251001",
             max_tokens=700,
-            temperature=0.4,
             system=prompt,
             messages=messages,
         )
@@ -102,7 +101,9 @@ async def chat_endpoint(request: ChatRequest):
     except HTTPException:
         raise
     except Exception as exc:
-        print(f"Chat provider request failed: {type(exc).__name__}")
+        # Keep provider diagnostics useful while never logging the submitted chat text.
+        detail = str(exc).replace(api_key or "", "[redacted]")[:240]
+        print(f"Chat provider request failed: {type(exc).__name__}: {detail}")
         raise HTTPException(status_code=502, detail="The chat service could not answer right now") from None
 
 
