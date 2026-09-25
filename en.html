@@ -971,13 +971,11 @@
                     bubble.className = "px-4 py-2.5 rounded-2xl rounded-tr-sm bg-slate-900 text-white text-sm shadow-sm leading-relaxed";
                 } else if (role === 'assistant') {
                     bubble.className = "px-4 py-2.5 rounded-2xl rounded-tl-sm bg-white border border-slate-200 text-sm text-slate-700 shadow-sm leading-relaxed markdown-content";
-                    text = text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-                    text = text.replace(/\n/g, '<br/>');
                 } else {
                     bubble.className = "px-4 py-2.5 rounded-2xl bg-red-50 border border-red-200 text-sm text-red-600 shadow-sm leading-relaxed";
                 }
                 
-                bubble.innerHTML = text;
+                bubble.textContent = text;
                 msgDiv.appendChild(bubble);
                 messagesContainer.appendChild(msgDiv);
                 messagesContainer.scrollTop = messagesContainer.scrollHeight;
@@ -1010,6 +1008,7 @@
                 
                 appendMessage('user', text);
                 messages.push({ role: 'user', content: text });
+                while (messages.length > 12) messages.shift();
                 
                 chatInput.value = '';
                 chatInput.disabled = true;
@@ -1031,6 +1030,7 @@
                     if (data.response) {
                         appendMessage('assistant', data.response);
                         messages.push({ role: 'assistant', content: data.response });
+                        while (messages.length > 12) messages.shift();
                     }
                 } catch (error) {
                     setTypingIndicator(false);
