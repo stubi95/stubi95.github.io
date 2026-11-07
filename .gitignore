@@ -16,3 +16,6 @@ __pycache__/
 ._.DS_Store
 .smbdelete*
 Thumbs.db
+
+# macOS-Metadaten (AppleDouble)
+._*
